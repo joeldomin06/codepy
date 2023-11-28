@@ -1,0 +1,16 @@
+.disabled-select{
+    user-select: none;
+    -moz-user-select: none;
+}
+div.sticky{
+    position: sticky;
+    top: 56px;
+    border: 3px solid black;
+    border-radius: 10px;
+    color: white;
+    padding-bottom: 10px;
+}
+input.rad{
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,1 @@
+var respuestas = [1,1,2,0,2]

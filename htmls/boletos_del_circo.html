@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Scripts-->
+    <script src="scripts/completar.js"></script>
+    <!--CSS-->
+    <link href="completar.css" rel="stylesheet">
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+    </style>
+</head>
+<body class="disabled-select">
+    <div class="container-fluid bg-secondary text-center">
+        <img src="imagenes/titulo.png" alt="tit" height="75" width="150">
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a href="codepymaker.html" class="navbar-brand">Codepy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link" href="home.html"><i class="fa fa-home"></i><span class="pl-1">Home</span></a></li>
+                <li class="navbar-item"><a href="referencias.html" class="nav-link">Referencias</a></li>
+                <li class="navbar-item"><a href="pre-problemas.html" class="nav-link">Ejercicios</a></li>
+                <li class="navbar-item"><a href="desafio1.html" class="nav-link">Desafios</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+            <h1 class="text-center">Boletos del circo</h1>
+            <hr>
+            <p class="text-justify" id="enunciado">
+                En la administración del circo "Cyrcus" le solicitan completar un programa que calcula el precio total a pagar por
+                boletos para este espectáculo, el cual tiene tres horarios: diurno, vespertino y nocturno.
+                <br>En el horario diurno existen 2 precios y son: para niños y adultos mayores $1500, para adultos jóvenes $2000.
+                <br>En el horario vespertino tambien hay 2 precios: para niños y adultos mayores $2000, para adultos jóvenes $2500.
+                <br>En el horario nocturno existe solo un precio y es $3000 por persona.
+                <br><b>Imporante:</b> para decir niños y adultos mayores en el códgo se usará la abreviación "nyam", para adultos jóvenes se usará la abreviación "aj".
+             </p>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-6">
+                    <h4>
+                        hor = int(input("Horario: "))
+                        <br>cont = 0
+                        <br><b>if</b> hor == "<input type="text" value="" id="largos" name="pre" class="in1">":
+                        <br>&emsp;a = int(input("Boletos para nyam: "))
+                        <br>&emsp;b = int(input("Boletos para aj: "))
+                        <br>&emsp;cont += a*1500 + <input type="text" value="" id="cortos" maxlength="1" name="pre" class="in2">*2000
+                        <br><b>elif</b> hor == "<input type="text" value="" id="largos" name="pre" class="in3">": 
+                        <br>&emsp;a = int(input("Boletos para nyam: "))
+                        <br>&emsp;b = int(input("Boletos para aj: "))
+                        <br>&emsp;cont += a*2000 + b*2500
+                        <br><b>elif</b> hor == "<input type="text" value="" id="largos" name="pre" class="in4">":
+                        <br>&emsp;a = int(input("Boletos: "))
+                        <br>&emsp;cont += <input type="text" value="" id="cortos" maxlength="1" name="pre" class="in5">*3000
+                        <br>print(cont)
+                    </h4>
+                </div>
+            </div>
+        </div>       
+    <button class="btn btn-dark" id="enviado" onclick="r = revisar();b = Buenas(r);l = totales(r);p = url();pasarVariables('respuesta.html','l,b,p')">Enviar</button>
+    <button class="btn btn-dark" id="enviado" onclick="document.getElementById('consejos').innerHTML = consejos(0,3,consejos_completar)">Consejos</button>
+    <h3 id="consejos"></h3>
+</body>
+</html>

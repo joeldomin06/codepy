@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!--Scripts-->
+    <script src="scripts/calculaelprecio.js"></script>
+    <!--Css-->
+    <link href="calculaelprecio.css" rel="stylesheet">
+    <!--Scripts Statics-->
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+        .disabled-drag {
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+
+<body class="disabled-select">
+    <div class="container-fluid bg-secondary text-center">
+        <img src="imagenes/titulo.png" alt="tit" height="75" width="150" class="disabled-drag">
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a href="codepymaker.html" class="navbar-brand disabled-drag">Codepy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link disabled-drag" href="home.html"><i class="fa fa-home"></i><span
+                            class="pl-1">Home</span></a></li>
+                <li class="navbar-item"><a href="referencias.html" class="nav-link disabled-drag">Referencias</a></li>
+                <li class="navbar-item"><a href="pre-problemas.html" class="nav-link disabled-drag">Ejercicios</a></li>
+                <li class="navbar-item"><a href="desafio1.html" class="nav-link disabled-drag">Desafios</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <hr>
+        <h1 style="text-align: center;">Calcula el Precio</h1>
+        <hr>
+        <p>
+            Una tienda de queso necesitan tu ayuda, a diario suelen llegar muchos clientes y los empleados se demoran en
+            calcular los precios de los queso. Se te solicita crear un programa que pida el peso del queso a vender en
+            Kg(entero) y el valor de ese tipo de queso también en kg(entero) de este en ese mismo orden, y que muestre
+            el precio
+            a vender del queso en entero.
+        </p>
+        <h3>Ordenamineto de codigo</h3>
+        <br>
+        <div class="row">
+                <div class="col">
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag1" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div1">peso_queso = int(input())</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag2" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div2">precio_por_kg = int(input())</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag3" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div3">precio_final = peso_queso*precio_por_kg</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag4" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div4">print(precio_final)</p></div></div>
+                </div>
+                <div class="col">
+                    <div class="row"><div class="col"><div id="div1" ondragenter="DragEnter(document.getElementById('div1'))" ondragleave="DragLeave(document.getElementById('div1'))" ondrop="drop(event);DragLeave(document.getElementById('div1'))" ondragover="testdiv(event, document.getElementById('div1').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div2" ondragenter="DragEnter(document.getElementById('div2'))" ondragleave="DragLeave(document.getElementById('div2'))" ondrop="drop(event);DragLeave(document.getElementById('div2'))" ondragover="testdiv(event, document.getElementById('div2').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div3" ondragenter="DragEnter(document.getElementById('div3'))" ondragleave="DragLeave(document.getElementById('div3'))" ondrop="drop(event);DragLeave(document.getElementById('div3'))" ondragover="testdiv(event, document.getElementById('div3').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div4" ondragenter="DragEnter(document.getElementById('div4'))" ondragleave="DragLeave(document.getElementById('div4'))" ondrop="drop(event);DragLeave(document.getElementById('div4'))" ondragover="testdiv(event, document.getElementById('div4').innerHTML)" class="drop"></div></div></div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col"><input type="submit" class="btn btn-dark" value="enviar"
+                    onclick="r = comprobacion();b = Buenas(r);l = totales(r);p = url();pasarVariables('respuesta.html','l,b,p');quitdrag()"
+                    id="btn"></div>
+            <div class="col-6">
+                <h3 id="res"></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-dark" id="enviado"
+                    onclick="document.getElementById('ayuda_1').innerHTML= consejos(0,3)">Botón para consejos</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4 id="ayuda_1" class="text-danger"></h4>
+            </div>
+        </div>
+    </div>

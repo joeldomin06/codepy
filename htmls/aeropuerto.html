@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!--Scripts-->
+    <script src="scripts/aeropuerto.js"></script>
+    <!--Css-->
+    <link href="css/aeropuerto.css" rel="stylesheet">
+    <!--Scripts Statics-->
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+        .disabled-drag {
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+
+<body class="disabled-select">
+    <div class="container-fluid bg-secondary text-center">
+        <img src="imagenes/titulo.png" alt="tit" height="75" width="150" class="disabled-drag">
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a href="codepymaker.html" class="navbar-brand disabled-drag">Codepy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link disabled-drag" href="home.html"><i class="fa fa-home"></i><span
+                            class="pl-1">Home</span></a></li>
+                <li class="navbar-item"><a href="referencias.html" class="nav-link disabled-drag">Referencias</a></li>
+                <li class="navbar-item"><a href="pre-problemas.html" class="nav-link disabled-drag">Ejercicios</a></li>
+                <li class="navbar-item"><a href="desafio1.html" class="nav-link disabled-drag">Desafios</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <hr>
+        <h1 style="text-align: center;"> Aeropuerto</h1>
+        <hr>
+        <p>Un avión tiene una capacidad de carga para equipaje de 180 Kg por pesona. Diseñe un programa que controle la recepción de equipaje, considerando lo siguiente:
+            <br> •	El peso de las maletas se ingresa uno por uno.
+            <br> •	Se deben rechazar las maletas de más de 100 Kg.
+            <br> •	El valor por Kg es:
+            <br>&emsp; o	de 0 a 5 Kg. $1000 por Kg.
+            <br>&emsp; o	de 6 a 30 Kg. $1500 por Kg.
+            <br>&emsp; o	de 31 a 100 Kg. $2000 por Kg.
+            <br> Los pesos siempre serán números enteros y pertenecen a una sola categoría (el valor de 20 Kg. es 20 x 1500).
+            <br> Cuando se intente agregar una nueva maleta y se sobrepase el límite de carga, no se agrega dicha maleta, y el programa termina mostrando lo siguiente:
+            <br> 1.	Número total de maletas en el vuelo.
+            <br> 2.	Peso de la maleta más pesada.
+            <br> 3.	Peso promedio de las maletas.
+            <br> 4.	Ganancias por concepto de carga en el avión.
+        </p> 
+        <h4>Relaciones de importancia para ordenar el programa</h4> 
+        <p> Al momento de ordenar las variables solo existirá una respuesta correcta para este caso (aunque puede reordenarse de otra forma que siga siendo aceptable) y la relación a considerar respecto al orden de 'Importancia' es:</p> 
+        <h4>• flag > suma > ganancias > i > mayor </h4> 
+        <p> Una ralación extra es con condicionales y variables de la siguiente forma:</p>
+        <h4>• variables(Opraciones) > condicionales(if,elif y else) > condicionales(if y else) > condicionales(if)</h4>
+        <p>Otro aspecto a considerar es que ya están aplicadas las tabulaciones en el programa, por lo que no será necesario preocuparse por ello.</p>
+        </h5><br>
+        <h3>Ordenamineto de codigo</h3>
+        <br>
+        <div class="row">
+                <div class="col">
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag1" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div1">flag = true</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag25" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div25">print('Ganancias: $',ganancias)</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag11" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div11">&emsp;&emsp;if peso <= 100:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag2" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div2">suma = 0</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag8" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div8">&emsp;if suma + peso > 180:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag17" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div17">&emsp;&emsp;&emsp;&emsp;ganancias += 1500*peso</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag21" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div21">&emsp;&emsp;&emsp;&emsp;mayor = peso</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag9" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div9">&emsp;&emsp;flag = False</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag18" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div18">&emsp;&emsp;&emsp;else:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag3" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div3">ganancias = 0</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag22" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div22">print('Número de maletas: ',i)</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag12" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div12">&emsp;&emsp;&emsp;suma += peso</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag20" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div20">&emsp;&emsp;&emsp;if mayor < peso:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag16" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div16">&emsp;&emsp;&emsp;elif 6 <= peso <= 30:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag13" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div13">&emsp;&emsp;&emsp;i += 1</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag7" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div7">&emsp;peso =int(input('Ingrese peso maleta: '))</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag5" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div5">mayor = -1</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag14" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div14">&emsp;&emsp;&emsp;if 0 <= peso <= 5:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag24" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div24">print('Peso promedio: ',suma/i,'Kg')</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag15" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div15">&emsp;&emsp;&emsp;&emsp;ganancias += 1000*peso</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r1').innerHTML)" id="r1"><p class="code" id="drag6" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div6">while flag:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r2').innerHTML)" id="r2"><p class="code" id="drag19" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div19">&emsp;&emsp;&emsp;&emsp;ganancias += 2000*peso</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r3').innerHTML)" id="r3"><p class="code" id="drag10" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div10">&emsp;else:</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag23" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div23">print('Maleta más pesada: ',mayor,'Kg')</p></div></div>
+                    <div class="row"><div class="col" ondrop="drop(event)" ondragover="testdiv(event, document.getElementById('r4').innerHTML)" id="r4"><p class="code" id="drag4" draggable="true" ondragstart="drag(event);DragStart(event)" ondragend="DragEnd(event)" name="div4">i = 0</p></div></div>
+                </div>
+                <div class="col">
+                    <div class="row"><div class="col"><div id="div1" ondragenter="DragEnter(document.getElementById('div1'))" ondragleave="DragLeave(document.getElementById('div1'))" ondrop="drop(event);DragLeave(document.getElementById('div1'))" ondragover="testdiv(event, document.getElementById('div1').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div2" ondragenter="DragEnter(document.getElementById('div2'))" ondragleave="DragLeave(document.getElementById('div2'))" ondrop="drop(event);DragLeave(document.getElementById('div2'))" ondragover="testdiv(event, document.getElementById('div2').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div3" ondragenter="DragEnter(document.getElementById('div3'))" ondragleave="DragLeave(document.getElementById('div3'))" ondrop="drop(event);DragLeave(document.getElementById('div3'))" ondragover="testdiv(event, document.getElementById('div3').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div4" ondragenter="DragEnter(document.getElementById('div4'))" ondragleave="DragLeave(document.getElementById('div4'))" ondrop="drop(event);DragLeave(document.getElementById('div4'))" ondragover="testdiv(event, document.getElementById('div4').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div5" ondragenter="DragEnter(document.getElementById('div5'))" ondragleave="DragLeave(document.getElementById('div5'))" ondrop="drop(event);DragLeave(document.getElementById('div5'))" ondragover="testdiv(event, document.getElementById('div5').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div6" ondragenter="DragEnter(document.getElementById('div6'))" ondragleave="DragLeave(document.getElementById('div6'))" ondrop="drop(event);DragLeave(document.getElementById('div6'))" ondragover="testdiv(event, document.getElementById('div6').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div7" ondragenter="DragEnter(document.getElementById('div7'))" ondragleave="DragLeave(document.getElementById('div7'))" ondrop="drop(event);DragLeave(document.getElementById('div7'))" ondragover="testdiv(event, document.getElementById('div7').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div8" ondragenter="DragEnter(document.getElementById('div8'))" ondragleave="DragLeave(document.getElementById('div8'))" ondrop="drop(event);DragLeave(document.getElementById('div8'))" ondragover="testdiv(event, document.getElementById('div8').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div9" ondragenter="DragEnter(document.getElementById('div9'))" ondragleave="DragLeave(document.getElementById('div9'))" ondrop="drop(event);DragLeave(document.getElementById('div9'))" ondragover="testdiv(event, document.getElementById('div9').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div10" ondragenter="DragEnter(document.getElementById('div10'))" ondragleave="DragLeave(document.getElementById('div10'))" ondrop="drop(event);DragLeave(document.getElementById('div10'))" ondragover="testdiv(event, document.getElementById('div10').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div11" ondragenter="DragEnter(document.getElementById('div11'))" ondragleave="DragLeave(document.getElementById('div11'))" ondrop="drop(event);DragLeave(document.getElementById('div11'))" ondragover="testdiv(event, document.getElementById('div11').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div12" ondragenter="DragEnter(document.getElementById('div12'))" ondragleave="DragLeave(document.getElementById('div12'))" ondrop="drop(event);DragLeave(document.getElementById('div12'))" ondragover="testdiv(event, document.getElementById('div12').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div13" ondragenter="DragEnter(document.getElementById('div13'))" ondragleave="DragLeave(document.getElementById('div13'))" ondrop="drop(event);DragLeave(document.getElementById('div13'))" ondragover="testdiv(event, document.getElementById('div13').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div14" ondragenter="DragEnter(document.getElementById('div14'))" ondragleave="DragLeave(document.getElementById('div14'))" ondrop="drop(event);DragLeave(document.getElementById('div14'))" ondragover="testdiv(event, document.getElementById('div14').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div15" ondragenter="DragEnter(document.getElementById('div15'))" ondragleave="DragLeave(document.getElementById('div15'))" ondrop="drop(event);DragLeave(document.getElementById('div15'))" ondragover="testdiv(event, document.getElementById('div15').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div16" ondragenter="DragEnter(document.getElementById('div16'))" ondragleave="DragLeave(document.getElementById('div16'))" ondrop="drop(event);DragLeave(document.getElementById('div16'))" ondragover="testdiv(event, document.getElementById('div16').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div17" ondragenter="DragEnter(document.getElementById('div17'))" ondragleave="DragLeave(document.getElementById('div17'))" ondrop="drop(event);DragLeave(document.getElementById('div17'))" ondragover="testdiv(event, document.getElementById('div17').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div18" ondragenter="DragEnter(document.getElementById('div18'))" ondragleave="DragLeave(document.getElementById('div18'))" ondrop="drop(event);DragLeave(document.getElementById('div18'))" ondragover="testdiv(event, document.getElementById('div18').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div19" ondragenter="DragEnter(document.getElementById('div19'))" ondragleave="DragLeave(document.getElementById('div19'))" ondrop="drop(event);DragLeave(document.getElementById('div19'))" ondragover="testdiv(event, document.getElementById('div19').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div20" ondragenter="DragEnter(document.getElementById('div20'))" ondragleave="DragLeave(document.getElementById('div20'))" ondrop="drop(event);DragLeave(document.getElementById('div20'))" ondragover="testdiv(event, document.getElementById('div20').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div21" ondragenter="DragEnter(document.getElementById('div21'))" ondragleave="DragLeave(document.getElementById('div21'))" ondrop="drop(event);DragLeave(document.getElementById('div21'))" ondragover="testdiv(event, document.getElementById('div21').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div22" ondragenter="DragEnter(document.getElementById('div22'))" ondragleave="DragLeave(document.getElementById('div22'))" ondrop="drop(event);DragLeave(document.getElementById('div22'))" ondragover="testdiv(event, document.getElementById('div22').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div23" ondragenter="DragEnter(document.getElementById('div23'))" ondragleave="DragLeave(document.getElementById('div23'))" ondrop="drop(event);DragLeave(document.getElementById('div23'))" ondragover="testdiv(event, document.getElementById('div23').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div24" ondragenter="DragEnter(document.getElementById('div24'))" ondragleave="DragLeave(document.getElementById('div24'))" ondrop="drop(event);DragLeave(document.getElementById('div24'))" ondragover="testdiv(event, document.getElementById('div24').innerHTML)" class="drop"></div></div></div>
+                    <div class="row"><div class="col"><div id="div25" ondragenter="DragEnter(document.getElementById('div25'))" ondragleave="DragLeave(document.getElementById('div25'))" ondrop="drop(event);DragLeave(document.getElementById('div25'))" ondragover="testdiv(event, document.getElementById('div25').innerHTML)" class="drop"></div></div></div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col"><input type="submit" class="btn btn-dark" value="enviar"
+                    onclick="r = comprobacion();b = Buenas(r);l = totales(r);p = url();pasarVariables('respuesta.html','l,b,p');quitdrag()"
+                    id="btn"></div>
+            <div class="col-6">
+                <h3 id="res"></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-dark" id="enviado"
+                    onclick="document.getElementById('ayuda_1').innerHTML= consejos(4)">Botón para consejos</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4 id="ayuda_1" class="text-danger"></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

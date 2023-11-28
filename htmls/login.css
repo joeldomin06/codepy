@@ -1,0 +1,17 @@
+#fondo{
+    background-color: rgba(0, 0, 0, 0.411);
+    height: 300px;
+}
+#form{
+    background-color: rgb(31, 31, 31);
+    height: 484px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+body{
+    background-image: url('imagenes/usm.jpg');
+}
+#cod:hover{
+    cursor: pointer;
+}

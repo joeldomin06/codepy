@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Scripts-->
+    <script src="scripts/problemas.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="problemas.css">
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+    </style>
+</head>
+
+<body class="disabled-select">
+    <div class="container-fluid bg-secondary text-center">
+        <img src="imagenes/titulo.png" alt="tit" height="75" width="150">
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a href="codepymaker.html" class="navbar-brand">Codepy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link" href="home.html"><i class="fa fa-home"></i><span
+                            class="pl-1">Home</span></a></li>
+                <li class="navbar-item"><a href="referencias.html" class="nav-link">Referencias</a></li>
+                <li class="navbar-item"><a href="pre-problemas.html" class="nav-link">Ejercicios</a></li>
+                <li class="navbar-item"><a href="desafio1.html" class="nav-link">Desafios</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <h1 class="display-1 text-center">Ejercicios</h1>
+        <hr>
+        <div class="d-flex">
+            <div class="container text-center m-1 pb-5 bg-dark text-white" id="btn-ord">
+                <div data-toggle="collapse" data-target="#dif1">
+                    <h1 class="display-3">Ordenamiento</h1>
+                    <img class="imagen" id="imagen1"></img>
+                </div>
+                <div id="dif1" class="collapse">
+                    <h1 class="display-5 text-center">Dificultad: </h1>
+                    <button class="btn btn-block" id="f"
+                        onclick="d = 0;ty = 'ord';pasarVariables('problemasres.html','d,ty,x');">facíl</button>
+                    <button class="btn btn-block btn-dark" id="m"
+                        onclick="d = 1;ty = 'ord';pasarVariables('problemasres.html','d,ty,x')">medio</button>
+                    <button class="btn btn-block" id="d"
+                        onclick="d = 2;ty = 'ord';pasarVariables('problemasres.html','d,ty,x')">dificíl</button>
+                </div>
+            </div>
+            <div class="container text-center m-1 pb-5 bg-light" id="btn-rut">
+                <div data-toggle="collapse" data-target="#dif2">
+                    <h1 class="display-3">Ruteo</h1>
+                    <img class="imagen" id="imagen2"></img>
+                </div>
+                <div id="dif2" class="collapse">
+                    <h1 class="display-5 text-center">Dificultad: </h1>
+                    <button class="btn btn-block" id="f"
+                        onclick="d = 0;ty = 'rut';pasarVariables('problemasres.html','d,ty,x')">facíl</button>
+                    <button class="btn btn-block btn-dark" id="m"
+                        onclick="d = 1;ty = 'rut';pasarVariables('problemasres.html','d,ty,x')">medio</button>
+                    <button class="btn btn-block" id="d"
+                        onclick="d = 2;ty = 'rut';pasarVariables('problemasres.html','d,ty,x')">dificíl</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="container text-center m-1 pb-5 bg-light" id="btn-com">
+                <div data-toggle="collapse" data-target="#dif3">
+                    <h1 class="display-3">Completación</h1>
+                    <img class="imagen" id="imagen3"></img>
+                </div>
+                <div id="dif3" class="collapse">
+                    <h1 class="display-5 text-center">Dificultad: </h1>
+                    <button class="btn btn-block" id="f"
+                        onclick="d = 0;ty = 'com';pasarVariables('problemasres.html','d,ty,x')">facíl</button>
+                    <button class="btn btn-block btn-dark" id="m"
+                        onclick="d = 1;ty = 'com';pasarVariables('problemasres.html','d,ty,x')">medio</button>
+                    <button class="btn btn-block" id="d"
+                        onclick="d = 2;ty = 'com';pasarVariables('problemasres.html','d,ty,x')">dificíl</button>
+                </div>
+            </div>
+            <div class="container text-center m-1 pb-5 bg-dark text-white" id="btn-pro"
+                onclick="d = 0;ty = 'quiz';pasarVariables('problemasres.html','d,ty,x')">
+                <h1 class="display-3">Quiz</h1>
+                <img class="imagen" id="imagen4"></img>
+            </div>
+        </div>
+    </div>
+    <br>
+    <a class="btn btn-dark m-2" href="pre-problemas.html">Pagina anterior</a>
+</body>

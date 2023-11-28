@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/login.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Scripts-->
+    <!--CSS-->
+    <link rel="stylesheet" href="login.css">
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+    </style>
+</head>
+
+<body class="disabked-select">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="navbar-nav ml-auto mr-auto"><img src="imagenes/titulo.png" alt="" width="175px" height="75px"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsio"
+            aria-controls="navbarsio" aria-expanded="false">
+            Iniciar sesion
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsio">
+            <ul class="navbar-nav ml-auto mr-5">
+                <li class="navbar-item">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-dark"><i class="fa fa-user"
+                                    style="color: white"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="usuario" id="inus">
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-dark"><i class="fa fa-lock"
+                                    style="color: white"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="contraseña" id="incon">
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <div class="text-center">
+                        <button class="btn btn-outline-light btn-sm text-white" id="btnin" onclick="l = login();verificar(l)">Iniciar
+                            Sesión</button>
+                    </div>
+                </li>
+        </div>
+        </div>
+    </nav>
+    <div class="container-fluid h-100" id="fondo">
+        <div class="row justify-content-center h-100">
+            <div class="col col-sm col-md-auto"></div>
+            <div class="col-auto col-sm-auto col-md-auto" id="form">
+                <h1 class="text-center text-white my-4">Registrarse</h1>
+                <div id="f">
+                    <div class="d-flex">
+                        <input type="text" placeholder="usuario" class="form-control mr-2" id="rus">
+                        <input type="text" placeholder="rol" class="form-control" id="rrol">
+                    </div>
+                    <input type="text" placeholder="correo" class="form-control mt-2" id="rcor">
+                    <select name="carrera" class="form-control mt-2" id="rcar">
+                        <option>Ing. Civil Informatica</option>
+                        <option>Ing. Civil Mecanica</option>
+                        <option>Ing. Civil Telematica</option>
+                        <option>Ing. Diseño de productos</option>
+                        <option>Ing. Civil Matematica</option>
+                        <option>Ing. Civil Plan común</option>
+                        <option>Ing. Civil Quimica</option>
+                        <option>Ing. Civil Electrica</option>
+                        <option>Ing. Civil de Minas</option>
+                    </select>
+                    <input type="password" placeholder="contraseña" class="form-control mt-2" id="rcon">
+                    <button class="btn btn-outline-light btn-lg text-white mt-2" id="btnreg"
+                        onclick="r = regs();verificar(r)">Registrar</button>
+                </div>
+            </div>
+            <div class="col-auto col-sm col-md-auto"></div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-right py-2 text-white">
+        <h1 onclick="redireccionar('codepymaker.html')" id="cod">¿ Qué es CodepyMaker ?</h1>
+    </div>
+</body>
+
+</html>

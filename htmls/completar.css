@@ -1,0 +1,10 @@
+#cortos {
+    text-align: center;
+    border: 1px solid black;
+    width: 30px;
+}
+#largos {
+    text-align: center;
+    border: 1px solid black;
+    width: 120px;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodepyMaker</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--Scripts-->
+    <link rel="stylesheet" href="css/largo.css">
+    <!--CSS-->
+    <script src="scripts/largo.js"></script>    
+    <!--Desabilitar seleccion-->
+    <style>
+        .disabled-select {
+            user-select: none;
+            -moz-user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-secondary text-center">
+        <img src="imagenes/titulo.png" alt="tit" height="75" width="150">
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <a href="codepymaker.html" class="navbar-brand">Codepy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav">
+                <li class="navbar-item"><a class="nav-link" href="home.html"><i class="fa fa-home"></i><span class="pl-1">Home</span></a></li>
+                <li class="navbar-item"><a href="referencias.html" class="nav-link">Referencias</a></li>
+                <li class="navbar-item"><a href="pre-problemas.html" class="nav-link">Ejercicios</a></li>
+                <li class="navbar-item"><a href="desafio1.html" class="nav-link">Desafios</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <h1 class="text-center">Ruteo 2</h1>
+        <hr>
+        <p class="text-justify" id="enunciado">
+            Realice el siguiente ruteo del siguiente programa e indique en el recuadro de la derecha lo que
+            imprime la salida. Cada vez que el valor cambie, escribalo en una nueva fila de la tabla. Si una
+            variable es tipo string, su valor debe ir entre comillas simples <i>' '</i> o dobles <i>" "</i>.
+        </p>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <h3>
+                    <b>def</b> largo(a):
+                    <br>&emsp;c = 0
+                    <br>&emsp;<b>for</b> x <b>in</b> a:
+                    <br>&emsp;&emsp;c += 1
+                    <br>&emsp;return c
+                </h3>
+            </div>
+            <div class="col"></div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-6">
+                <h3>
+                    <br>m = [100,"SAO",23,"sus",35]
+                    <br>n = ["hola","adios"]
+                    <br>print(largo(m) + largo(n))
+                </h3>
+            </div>
+            <div class="col">
+                <h2>Salida :</h2>
+                <textarea name="salida" id="sal" cols="25" rows="3" value="" style="color: black"></textarea>
+            </div>
+        </div>
+        <br>
+        <!--Tabla-->
+        <div class="container-fluid mx-2" id="tabla">
+            <div class="row" id="cont">
+                <div class="col-6" id="tit">Programa</div>
+                <div class="col-6" id="tit">Op</div>
+            </div>
+            <div class="row" id="cont">
+                <div class="col-3" id="cont">m</div>
+                <div class="col-3" id="cont">n</div>
+                <div class="col-3" id="cont">a</div>
+                <div class="col-1" id="cont">c</div>
+                <div class="col-2" id="cont">x</div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext" id="r0"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"id="r1"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"id="r2"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r3"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"id="r4"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r5"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"id="r6"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r7"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"id="r8"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r9"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"id="r10"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r11"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"id="r12"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r13"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"id="r14"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r15"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"id="r16"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r17"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"id="r18"></div>
+            </div>
+            <div class="row" id="cont" name="f">
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-3" id="cont"><input type="text" class="form-control-plaintext"></div>
+                <div class="col-1" id="cont"><input type="text" class="form-control-plaintext"id="r19"></div>
+                <div class="col-2" id="cont"><input type="text" class="form-control-plaintext"></div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-dark" onclick="r = evaluar(respuestas_r,textarea_r);b = Buenas(r);l = totales(r);p = url();pasarVariables('respuesta.html','l,b,p');">Enviar</button>
+        <button class="btn btn-dark" onclick="document.getElementById('ayuda_1').innerHTML= consejos(0,7)">botón de consejos</button>
+        <br>
+        <p id="ayuda_1"></p>
+    </div>
+</body>
+</html>

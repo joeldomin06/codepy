@@ -1,0 +1,145 @@
+-- MySQL Workbench Forward Engineering	
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;	
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;	
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';	
+
+-- -----------------------------------------------------	
+-- Schema mydb	
+-- -----------------------------------------------------	
+
+-- -----------------------------------------------------	
+-- Schema mydb	
+-- -----------------------------------------------------	
+CREATE SCHEMA IF NOT EXISTS `proyecto` DEFAULT CHARACTER SET utf8 ;	
+USE `proyecto` ;	
+
+-- -----------------------------------------------------	
+-- Table `mydb`.`problemas`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`problemas` (	
+  `enunciados` BLOB NOT NULL,	
+  `experiencia` INT NOT NULL,	
+  `id_Rol` INT NOT NULL,	
+  PRIMARY KEY (`enunciados`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `proyecto`.`usuarios`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`usuarios` (	
+  `id_Rol` INT NOT NULL,	
+  `nombre` VARCHAR(120) NOT NULL,	
+  `carrera` VARCHAR(125) NOT NULL,	
+  `contrasena` VARCHAR(20) NOT NULL,	
+  `exp/nivel` INT NOT NULL,	
+  `diagnostico` BLOB NOT NULL,	
+  PRIMARY KEY (`id_Rol`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `proyecto`.`respuestas`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`respuestas` (	
+  `salidas` BLOB NOT NULL,	
+  PRIMARY KEY (`salidas`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `proyecto`.`consejos`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`consejos` (	
+  `enunciados` BLOB NOT NULL,	
+  `otras soluciones` BLOB NOT NULL,	
+  `consejos` BLOB NOT NULL,	
+  PRIMARY KEY (`enunciados`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `proyecto`.`material de aprendizaje`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`material de aprendizaje` (	
+  `metodos` BLOB NOT NULL,	
+  `hipervinculos` BLOB NOT NULL,	
+  `editores` BLOB NOT NULL,	
+  `id_rol` INT NOT NULL,	
+  `material de aprendizajecol` VARCHAR(45) NOT NULL,	
+  PRIMARY KEY (`id_rol`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `proyecto`.`hipervinculos`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`hipervinculos` (	
+  `hipervinculos` BLOB NOT NULL,	
+  `c1` BLOB NOT NULL,	
+  `c2` BLOB NOT NULL,	
+  `c3` BLOB NOT NULL,	
+  PRIMARY KEY (`hipervinculos`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `proyecto`.`certemen 1`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`certemen 1` (	
+  `definiciones` BLOB NOT NULL,	
+  `ejemplos` BLOB NOT NULL,	
+  `c1` BLOB NOT NULL COMMENT 'metodos certamen 1\n',	
+  PRIMARY KEY (`c1`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `mydb`.`certamen 2`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`certamen 2` (	
+  `definiciones` BLOB NOT NULL,	
+  `ejemplos` BLOB NOT NULL,	
+  `certamen 2` BLOB NOT NULL,	
+  PRIMARY KEY (`certamen 2`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `mydb`.`certamen 3`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`certamen 3` (	
+  `definiciones` BLOB NOT NULL,	
+  `ejemplos` BLOB NOT NULL,	
+  `certamen 3` BLOB NOT NULL,	
+  PRIMARY KEY (`certamen 3`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `mydb`.`dianostico_test`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`dianostico_test` (	
+  `diagnostico` BLOB NOT NULL,	
+  `preguntas` BLOB NOT NULL,	
+  `respuestas` BLOB NOT NULL,	
+  PRIMARY KEY (`diagnostico`))	
+ENGINE = InnoDB;	
+
+
+-- -----------------------------------------------------	
+-- Table `mydb`.`editores`	
+-- -----------------------------------------------------	
+CREATE TABLE IF NOT EXISTS `proyecto`.`editores` (	
+  `editores` BLOB NOT NULL,	
+  `descripciones` BLOB NOT NULL,	
+  `descarga` BLOB NOT NULL,	
+  `requeriminetos` BLOB NOT NULL,	
+  PRIMARY KEY (`editores`))	
+ENGINE = InnoDB;	
+
+
+SET SQL_MODE=@OLD_SQL_MODE;	
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;	
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;	

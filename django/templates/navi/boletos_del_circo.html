@@ -1,0 +1,54 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/completar.css' %}">
+{% endblock extrahead %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Boletos del circo</h1>
+    <hr>
+    <p class="text-justify" id="enunciado">
+        En la administración del circo "Cyrcus" le solicitan completar un programa que calcula el precio total a pagar
+        por
+        boletos para este espectáculo, el cual tiene tres horarios: diurno, vespertino y nocturno.
+        <br>En el horario diurno existen 2 precios y son: para niños y adultos mayores $1500, para adultos jóvenes
+        $2000.
+        <br>En el horario vespertino tambien hay 2 precios: para niños y adultos mayores $2000, para adultos jóvenes
+        $2500.
+        <br>En el horario nocturno existe solo un precio y es $3000 por persona.
+        <br><b>Imporante:</b> para decir niños y adultos mayores en el códgo se usará la abreviación "nyam", para
+        adultos jóvenes se usará la abreviación "aj".
+    </p>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <form method="POST">
+                {% csrf_token %}
+                <h4>
+                    hor = int(input("Horario: "))
+                    <br>cont = 0
+                    <br><b>if</b> hor == "<input type="text" id="largos" name="{{ tip }}" class="{{lista_clases.0}}" value="">":
+                    <br>&emsp;a = int(input("Boletos para nyam: "))
+                    <br>&emsp;b = int(input("Boletos para aj: "))
+                    <br>&emsp;cont += a*1500 + <input type="text" id="cortos" maxlength="1" name="{{ tip }}" class="{{lista_clases.1}}" value="">*2000
+                    <br><b>elif</b> hor == "<input type="text" id="largos" name="{{ tip }}" class="{{lista_clases.2}}" value="">":
+                    <br>&emsp;a = int(input("Boletos para nyam: "))
+                    <br>&emsp;b = int(input("Boletos para aj: "))
+                    <br>&emsp;cont += a*2000 + b*2500
+                    <br><b>elif</b> hor == "<input type="text" id="largos" name="{{ tip }}" class="{{lista_clases.3}}" value="">":
+                    <br>&emsp;a = int(input("Boletos: "))
+                    <br>&emsp;cont += <input type="text" id="cortos" maxlength="1" name="{{ tip }}" class="{{lista_clases.4}}" value="">*3000
+                    <br>print(cont)
+                </h4>
+                <br>
+                {% block boton %}
+                <input type="submit" class="btn btn-dark" value="Enviar" id="btn-validar">
+                {% endblock boton %}
+            </form>
+        </div>
+        <h1 class="col-6" id="cron"></h1>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,226 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/editores.css' %}">
+{% endblock extrahead%}
+{% block confbody %}
+<body data-spy="scroll" data-target=".sub" data-offset="50" class="disabled-select">
+{% endblock confbody %}
+{% block content %}
+    <div class="container">
+        <div class="d-flex justify-content-center" id="arriba">
+            <a class="sub btn btn-dark m-2" href="#sublime">
+                <h3>Sublime text</h3>
+            </a>
+            <a class="sub btn btn-dark m-2" href="#brackets">
+                <h3>Brackets</h3>
+            </a>
+            <a class="sub btn btn-dark m-2" href="#coda">
+                <h3>Coda</h3>
+            </a>
+            <a class="sub btn btn-dark m-2" href="#notepad">
+                <h3>Notepad++</h3>
+            </a></span>
+            <a class="sub btn btn-dark m-2" href="#atom">
+                <h3>Atom</h3>
+            </a>
+        </div>
+        <div id="sublime">
+            <div class="container text-center">
+                <hr>
+                <h1 class="display-3">Sublime Text</h1>
+                <hr>
+                <img src="{% static 'css/imagenes/sublimetext.jpg' %}" alt="" class="imge">
+                <hr>
+            </div>
+            <h3>Editor multiplataforma que incorpora un diseño simple y funcional, ideal para personas que trabajan a
+                nivel
+                usuario medio.</h3>
+            <h2>Características:</h2>
+            <ul>
+                <li>
+                    <h5>Minimapa: consiste en una previsualización de la estructura del código, es muy útil para
+                        desplazarse
+                        por
+                        el archivo cuando se conoce bien la estructura de este.</h5>
+                </li>
+                <li>
+                    <h5>Multi Selección: Hace una selección múltiple de un término por diferentes partes del archivo.
+                    </h5>
+                </li>
+                <li>
+                    <h5>Multi Cursor: Crea cursores con los que podemos escribir texto de forma arbitraria en diferentes
+                        posiciones del archivo.</h5>
+                </li>
+                <li>
+                    <h5>Multi Layout: Trae siete configuraciones de plantilla podemos elegir editar en una sola ventana
+                        o
+                        hacer
+                        una división de hasta cuatro ventanas verticales o cuatro ventanas en cuadrícula.</h5>
+                </li>
+                <li>
+                    <h5>Soporte nativo para infinidad de lenguajes: Soporta de forma nativa 43 lenguajes de programación
+                        y
+                        texto
+                        plano.</h5>
+                </li>
+            </ul>
+        </div>
+        <div id="brackets">
+            <br>
+            <div class="container text-center">
+                <hr>
+                <h1 class="display-3">Brackets</h1>
+                <hr>
+                <img src="{% static 'css/imagenes/brackets.jpg' %}" alt="" class="imge">
+                <br><br>
+            </div>
+            <h3>un software de código abierto y gratuito que permite seleccionar y editar secciones concretas de CSS,
+                sin
+                tener
+                que
+                estar cambiando de línea de código constantemente</h3>
+            <h2>Características:</h2>
+            <h5>Es un editor de código que soporta distintos lenguajes, cuenta con temas para poner de color la letra
+                según
+                la
+                estructura del código. Tiene una interfaz muy sencilla y moderna, permite a través de Google Chrome
+                revisar
+                los
+                cambios en nuestro código sin necesidad de siquiera tener que guardar el texto. Tiene la posibilidad de
+                agregar
+                extensiones a la aplicación para así añadir más características y tener un editor más completo.</h5>
+        </div>
+        <a class="btn btn-dark" href="#arriba"><h5>volver arriba </h5></a>
+        <div id="coda">
+            <br>
+            <div class="container text-center">
+                <hr>
+                <h1 class="display-3">Coda (editor para MAC y IOS)</h1>
+                <hr>
+                <img src="{% static 'css/imagenes/coda.jpg' %}" alt="" class="imge">
+                <br><br>
+            </div>
+            <h3>Coda no se limita a un editor de texto, sino que ofrece una serie de características extras. Teniendo en
+                cuenta
+                que podemos añadir todos los plugins que queramos, podríamos estar hablando de Coda durante días enteros
+            </h3>
+            <h2>Características:</h2>
+            <ul class="text-justify">
+                <li>
+                    <h5>Gestor de archivos: Desde la propia aplicación podemos gestionar todos los documentos necesarios
+                        para
+                        crear la página web (documentos de texto, CSS, HTML, imágenes, carpetas…) gracias a su
+                        explorador de
+                        archivos. Asimismo estos documentos pueden estar en local o en un servidor mediante FTP, WebDAV
+                        u
+                        otros.
+                    </h5>
+                </li>
+                <li>
+                    <h5>Visualizador de resultados: Obviamente mientras picamos el código es ideal poder visualizar los
+                        cambios
+                        en la página. Para ello Coda ofrece una vista previa en tiempo real. Esta vista previa incluso
+                        la
+                        podemos abrir en el iPhone o el iPad gracias a AirPreview para ver cómo se visualiza en otras
+                        pantallas.
+                    </h5>
+                </li>
+                <li>
+                    <h5>Clips para automatizar: Desde Coda podemos configurar una serie de bloques de código que solemos
+                        utilizar a menudo para no tener que andar buscándolos y copiándolos, simplemente pulsamos el
+                        botón y
+                        se
+                        añaden al texto.</h5>
+                </li>
+                <li>
+                    <h5>Valdidador HTML y editor MySQL: Entre muchas otras opciones Coda nos permite por ejemplo validar
+                        nuestro
+                        código HTML para ver si cumple con los estándares o editar y definir la estructura de una base
+                        de
+                        datos
+                        en MySQL.</h5>
+                </li>
+            </ul>
+        </div>
+        <a class="btn btn-dark" href="#arriba"><h5>volver arriba </h5></a>
+        <div id="notepad">
+            <br>
+            <div class="container text-center">
+                <hr>
+                <h1 class="display-3">Notepad++</h1>
+                <hr>
+                <img src="{% static 'css/imagenes/notepad++.jpg' %}" alt="" class="imge">
+                <br><br>
+            </div>
+            <h3>Notepad++ es un editor de texto y de código fuente libre con soporte para varios lenguajes de
+                programación.
+                Con soporte nativo para Microsoft Windows.</h3>
+            <h2>Características:</h2>
+            <ul class="text-justify">
+                <li>
+                    <h5>Múltiples pestañas y multiview: permite ver al mismo tiempo dos pestañas diferentes y dividir la
+                        pantalla verticalmente. ¿Qué utilidad tiene esto? Pues que puedes compararlas, copiar y pegar
+                        entre
+                        ficheros o tener el mismo fichero en dos ventanas con diferente configuración de visualización.
+                    </h5>
+                </li>
+                <li>
+                    <h5>Sangrados, folding y numeración de líneas: podrás localizar errores con rapidez o ver con
+                        claridad
+                        las distintas secciones del fichero.</h5>
+                </li>
+                <li>
+                    <h5>Resaltado de sintaxis del código.</h5>
+                </li>
+                <li>
+                    <h5>Función de autocompletar</h5>
+                </li>
+            </ul>
+        </div>
+        <a class="btn btn-dark" href="#arriba"><h5>volver arriba </h5></a>
+        <div id="atom">
+            <br>
+            <div class="container text-center">
+                <hr>
+                <h1 class="display-3">Atom</h1>
+                <hr>
+                <img src="{% static 'css/imagenes/atom.jpg' %}" alt="" class="imge">
+                <br><br>
+            </div>
+            <h3>Editor de código novedoso, el cual permite modificar su entorno de trabajo para personalizarlo al gusto
+                de
+                cada usuario.</h3>
+            <h2>Características:</h2>
+            <ul>
+                <li>
+                    <h5>Funcionalidades extra (Packages): Ésta es una de las áreas dónde Atom destaca especialmente. Con
+                        el
+                        "package manager", instalado por defecto, podemos instalar y desinstalar fácilmente casi
+                        cualquier
+                        función imaginable, pues a día de hoy más de 6500 paquetes de modificaciones se encuentran
+                        disponibles.</h5>
+                </li>
+                <li>
+                    <h5>Integración con Git: Atom ha sido desarrollado por miembros de la plataforma GitHub, y esto se
+                        nota
+                        a la hora de trabajar con el. Nuestro proyecto de Atom se sincronizará automàticamente con el
+                        repositorio de Git y veremos en todo momento si se encuentra en la misma versión que nuestro
+                        repositorio o en qué documentos hay divergencias.</h5>
+                </li>
+                <li>
+                    <h5>Personalización: Atom dispone de un documento totalmente editable donde podemos ajustar el
+                        estilo de
+                        trabajo a nuestras más detalladas preferencias. Desde "convertir las tabulaciones en espacios" y
+                        viseversa hasta "guardar automáticamente al perder el enfoque en el archivo".</h5>
+                </li>
+            </ul>
+        </div>
+        <a class="btn btn-dark" href="#arriba"><h5>volver arriba </h5></a>
+        <br>
+    </div>
+    <br>
+    <div class="container-fluid bg-dark p-2">
+        <a class="btn btn-outline-light" href="{% url 'ref' %}" id="btn-v">Volver a la pagina anterior</a>
+    </div>
+{% endblock content %}

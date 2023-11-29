@@ -1,0 +1,28 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% load template_extras %}
+{% block confbody %}
+<body class="disabled-select" onload="move()">
+{% endblock confbody %}
+{% block navbar %}
+<div class="container-fluid bg-secondary text-center">
+    <img src="{% static 'css/imagenes/titulo.png' %}" alt="tit" height="75" width="150">
+</div>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+    <a href="{% url 'codepy' %}" class="navbar-brand">Codepy</a>
+</nav>
+{% endblock navbar %}
+{% block content %}
+    <div class="container">
+        <div class="container py-5 text-center">
+            <h1>Porcentaje</h1>
+            <h1 id="por" class="display-1">{{ porc|to_int }}</h1>
+            <h1 id="cal"></h1>
+            <a class="btn btn-dark" href="{% url 'cargar' leng=leng tip=tip nombre=nombre %}">volver al ejercicio</a>
+            <a class="btn btn-dark" href="{% url 'lenguaje' %}">volver a problemas</a>
+        </div>
+    </div>
+{% endblock content %}
+{% block javascript %}
+    <script src="{% static 'js/respuesta.js' %}"></script>
+{% endblock javascript %}

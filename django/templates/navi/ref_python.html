@@ -1,0 +1,1025 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/ref_python.css' %}">
+{% endblock extrahead%}
+{% block content %}
+    <div class="container">
+        <div class="container-fluid bg-light bb">
+            <h1 data-toggle="collapse" data-target="#tdato" class="display-3 t">Tipos de datos</h1>
+            <div class="collapse row" id="tdato">
+                <div class="col">
+                    <h1>Datos de texto: </h1>
+                    <h3>str</h3>
+                    <h6>*Strings</h6>
+                    <h1>Datos numericos: </h1>
+                    <h3>int, float</h3>
+                    <h6>*Enteros, Decimales</h6>
+                    <h1>Datos booleanos: </h1>
+                    <h3>bool</h3>
+                    <h6>*tiene dos valores True o False</h6>
+                    <h1>Datos secuenciales: </h1>
+                    <h3>list, tuple, str</h3>
+                    <h6>*Listas, Tuplas, strings</h6>
+                    <h1>Datos de mapeo: </h1>
+                    <h3>dict</h3>
+                    <h6>*Diccionarios</h6>
+                </div>
+                <div class="col">
+                    <h1>Datos mutables</h1>
+                    <h6>Es posible cambiar, modificar o actualizar el contenido</h6>
+                    <ul>
+                        <li>list</li>
+                        <li>dict</li>
+                    </ul>
+                    <h1>Datos inmutables</h1>
+                    <h6>No es posible cambiar, modificar o actualizar el contenido</h6>
+                    <ul>
+                        <li>int</li>
+                        <li>float</li>
+                        <li>bool</li>
+                        <li>tuple</li>
+                        <li>str</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#var">Variables</h1>
+            <div class="collapse" id="var">
+                <h1>Crear variables</h1>
+                <h3>Las variables son contenedores para almacenar datos.Python no posee un comando especifico para crear
+                    variables, como en otros lenguajes de programación.Una variable es creada cuando por primera vez le
+                    asignas un valor.</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>x = 4</h6>
+                    <h6>y = 'hola'</h6>
+                </div>
+                <h3>Además en las variables con strings las comillas simples y las dobles son lo mismo en Python</h3>
+                <h1>Nombrar una variable</h1>
+                <h3>Una variable puede tener un nombre corto (como x o y) o uno más descriptivo (como
+                    edad,fecha,area_total).Sin embargo Python tiene regalas para considerar a una variable: </h3>
+                <ul>
+                    <li>
+                        <h4>Una variable debe de comenzar con una letra o un '_'</h4>
+                    </li>
+                    <li>
+                        <h4>Una variable no puede iniciar con un numero</h4>
+                    </li>
+                    <li>
+                        <h4>Una variable solo puede contener caracteres alpha-numericos y guiones bajos (A-z, 0-9 y _ )
+                        </h4>
+                    </li>
+                    <li>
+                        <h4>Las variables es sensible a las mayúsculas ej: edad, Edad y EDAD son 3 diferentes variables
+                        </h4>
+                    </li>
+                </ul>
+                <h1>Salidas de variables</h1>
+                <h3>En Python print es el comando para generar una salida de datos.</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>x = 'hola mundo'</h6>
+                    <h6>print(x)</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>hola mundo</h6>
+                </div>
+                <h3>print() acepta cualquier tipo de dato y lo transforma a un texto para despues mostrarlo</h3>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#num">Números</h1>
+            <div class="collapse" id="num">
+                <h1>Int (Enteros)</h1>
+                <h3>Estos toman los valores desde negativos hasta positivos sin tomar los Decimales y estos tienen rango
+                    ilimitado de digitos</h3>
+                <h2>Ejemplos: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>n = 4</h6>
+                    <h6>k = -345</h6>
+                </div>
+                <h1>Float (Decimales)</h1>
+                <h3>Es un numero que puede contener uno o más decimales y este puede ser positivo o negativo, estos se
+                    denotan con un . en el donde comienza la parte decimal</h3>
+                <h2>Ejemplos: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>n = 3.1415</h6>
+                    <h6>k = -1.0</h6>
+                </div>
+                <h3>Tambien estos pueden estar en anotacion cientifica con 'e' el cual idica la potencia de 10</h3>
+                <h2>Ejemplos: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>n = 35e3 (es igual a 35 por 10 a la 3)</h6>
+                    <h6>k = 12.2E2 (tambien funciona con E)</h6>
+                </div>
+                <h1>Conversión de tipo</h1>
+                <h3>Puedes convertir de un tipo de dato al otro con int(), float()</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>x = 12</h6>
+                    <h6>y = 2.17</h6>
+                    <h6>print(float(x)) #la salida es 12.0</h6>
+                    <h6>print(int(y)) #la salida es 2</h6>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#op">Operaciones</h1>
+            <div class="collapse" id="op">
+                <h1>Operadores aritmeticos</h1>
+                <h3>Los operadores aritmeticos trabajan con dos variables numericas</h3>
+                <table class="table table-light table-striped text-left">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Nombre</th>
+                            <th>Ejemplo</th>
+                            <th>Salida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Adición</td>
+                            <td>5 + 6</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>sustracción</td>
+                            <td>16 - 3</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplición</td>
+                            <td>3 * 5</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>División</td>
+                            <td>24 / 8</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>**</td>
+                            <td>Potencia (Elevado)</td>
+                            <td>2 ** 5</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modúlo</td>
+                            <td>16 % 2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>//</td>
+                            <td>División entera</td>
+                            <td>3 // 2</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h1>Operadores de asignación</h1>
+                <h3>Los operadores de asignación son para asignar valores a variables</h3>
+                <table class="table table-light table-striped text-left">
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Ejemplo</th>
+                            <th>Es igual a</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>=</td>
+                            <td>x = 6</td>
+                            <td>x = 6</td>
+                        </tr>
+                        <tr>
+                            <td>+=</td>
+                            <td>x += 5</td>
+                            <td>x = x + 5</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>x -= 7</td>
+                            <td>x = x - 7</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>x *= 3</td>
+                            <td>x = x * 3</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>x /= 8</td>
+                            <td>x = x / 8</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>x %= 12</td>
+                            <td>x = x % 12</td>
+                        </tr>
+                        <tr>
+                            <td>//=</td>
+                            <td>x //= 64</td>
+                            <td>x = x // 64</td>
+                        </tr>
+                        <tr>
+                            <td>**=</td>
+                            <td>x ** 2</td>
+                            <td>x = x ** 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#cond">Condicionales</h1>
+            <div class="collapse" id="cond">
+                <h1>Condiciones:</h1>
+                <h3>Estos son los que acompañarán a las declaraciones "if" o "elif" y bucles.</h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>Igual: a == b</h6>
+                    <h6>No es igual: a != B</h6>
+                    <h6>Menos de: a < b </h6> <h6>Menor o igual que: a <= b</h6> <h6>Mayor que: a > b</h6>
+                    <h6>Mayor o igual que: a >= b</h6>
+                </div><br>
+                <h1>Declaración if:</h1>
+                <h3>Se escribe una "declaración if" utilizando la palabra clave if.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = 50</h6>
+                    <h6> b = 100</h6>
+                    <h6> if b > a:</h6>
+                    <h6>&emsp; print("b es mayor que a")</h6>
+                </div>
+                <h3>En este ejemplo, usamos dos variables, a y b, que se usan como parte de la instrucción if para
+                    probar si b es mayor que a. Como a es 50 yb es 100, sabemos que 100 es mayor que 50, por lo que
+                    imprimimos en la pantalla que "b es mayor que a".</h3><br>
+                <h1>Elif</h1>
+                <h3>La palabra clave elif es la forma de python de decir "si las condiciones anteriores no eran
+                    ciertas, entonces intente esta condición".</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = 50</h6>
+                    <h6> b = 50</h6>
+                    <h6> if b > a:</h6>
+                    <h6>&emsp; print("b es mayor que a")</h6>
+                    <h6> elif b == a:</h6>
+                    <h6>&emsp; print("b es igual que a")</h6>
+                </div>
+                <h3>En este ejemplo, a es igual a b, por lo que la primera condición no es verdadera, pero la
+                    condición elif es verdadera, por lo que imprimimos en la pantalla que "a y b son iguales".</h3>
+                <br>
+                <h1>Else</h1>
+                <h3>La palabra clave else captura cualquier cosa que no esté atrapada por las condiciones
+                    anteriores.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = 100</h6>
+                    <h6> b = 50</h6>
+                    <h6> if b > a:</h6>
+                    <h6>&emsp; print("b es mayor que a")</h6>
+                    <h6> elif b == a:</h6>
+                    <h6>&emsp; print("b es igual que a")</h6>
+                    <h6> else:</h6>
+                    <h6>&emsp; print("a es mayor que b")</h6>
+                </div>
+                <h3>En este ejemplo, a es mayor que b, por lo que la primera condición no es verdadera, también la
+                    condición elif no es verdadera, así que pasamos a la condición else e imprimimos en la pantalla
+                    que "a es mayor que b".</h3>
+                <br>
+                <h3>También puedes tener un else sin el elif:</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = 100</h6>
+                    <h6> b = 50</h6>
+                    <h6> if b > a:</h6>
+                    <h6>&emsp; print("b es mayor que a")</h6>
+                    <h6> else:</h6>
+                    <h6>&emsp; print("a es mayor que b")</h6>
+                </div><br>
+                <h1>Sangría</h1>
+                <h3>Python se basa en la sangría (espacio en blanco al comienzo de una línea) para definir el
+                    alcance en el código. Otros lenguajes de programación a menudo usan llaves para este propósito.
+                </h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = 50</h6>
+                    <h6> b = 100</h6>
+                    <h6> if b > a:</h6>
+                    <h6>print("b es mayor que a")</h6>
+                </div>
+                <h3>En este caso al omitirse la sangría se producirá un error.</h3><br>
+                <h1>And</h1>
+                <h3>La palabra clave y es un operador lógico, y se utiliza para combinar declaraciones condicionales
+                </h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = 100</h6>
+                    <h6> b = 50</h6>
+                    <h6> c = 150 </h6>
+                    <h6> if a > b and c > a:</h6>
+                    <h6>&emsp; print("c es mayor que b")</h6>
+                </div>
+                <h3>En este ejemplo se comprueban las 2 condiciones y si ambas se cumplen imprime "c es mayor que
+                    b".</h3><br>
+                <h1>Or</h1>
+                <h3>La palabra clave or es un operador lógico y se usa para combinar declaraciones condicionales
+                </h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = 100</h6>
+                    <h6> b = 50</h6>
+                    <h6> c = 150 </h6>
+                    <h6> if c > b or c > a:</h6>
+                    <h6>&emsp; print("C")</h6>
+                </div>
+                <h3>En este ejemplo se comprueban las 2 condiciones y si una de las dos se cumple se imprime "C".
+                </h3><br>
+                <h1>Anidado</h1>
+                <h3>Puede tener declaraciones if dentro de declaraciones if, esto se llama instrucciones if
+                    anidadas.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> if a > b:</h6>
+                    <h6>&emsp;if c > b:</h6>
+                    <h6>&emsp;&emsp;print("O")</h6>
+                </div>
+                <h3>En este ejemplo se comprueba la primera condición "a > b", si esta se cumple compruba si "c >
+                    b", y esi esta última se llega a cumplir imprime "O".</h3><br>
+            </div><br>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#whi">Ciclo while</h1>
+            <div class="collapse" id="whi">
+                <h3>Con el ciclo while podemos ejecutar un conjunto de declaraciones siempre que una condición sea
+                    verdadera, se debe considerar crear un cierre a ste para que no se repita de manera indefinida.
+                </h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>i = 1</h6>
+                    <h6>while i < 6:</h6> <h6>&emsp;print(i)</h6>
+                    <h6>&emsp;i += 1 </h6>
+                </div>
+                <h3>El tiempo del bucle depende de la condición, como en este caso la variable "i" va aumentando de
+                    1 en 1 hasta llegar a 6 y así "romper el ciclo" para salir de este.</h3><br>
+                <h1>Sentencia break</h1>
+                <h3>Con la declaración break podemos detener el bucle, incluso si la condición es verdadera:</h3>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>i = 1</h6>
+                    <h6>while i < 6:</h6> <h6>&emsp;if i == 3:</h6>
+                    <h6>&emsp;&emsp;break</h6>
+                    <h6>&emsp;print(i)</h6>
+                    <h6>&emsp;i += 1 </h6>
+                </div>
+                <h3>Cuando i sea iguala 3 y pase por el condicional if, eso cerrará el ciclo aunque la condición
+                    inicial sigue siendo verdadera.</h3>
+                <br>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#fun">Funciones</h1>
+            <div class="collapse" id="fun">
+                <h3>Una función es un bloque de código que sólo se ejecuta cuando se le llama.</h3>
+                <h3>Puede pasar datos, conocidos como parámetros, en una función.</h3>
+                <h3>Una función puede devolver datos como resultado.</h3><br>
+                <h1>Crear una función</h1>
+                <h3>En Python una función se define utilizando la palabra clave "def"</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> def una_funcion():</h6>
+                    <h6>&emsp;print("Hola funcion")</h6>
+                </div><br>
+                <h1>Llamado de función</h1>
+                <h3>Para llamar a una función, se utilza el nombre de la función a llamar seguido de paréntesis
+                </h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> def una_funcion():</h6>
+                    <h6>&emsp;print("Hola funcion")</h6>
+                    <h6>una_funcion()</h6>
+                </div><br>
+                <h1>Parámetros</h1>
+                <h3>La información puede suministrarse a las funciones como parámetro.</h3>
+                <h3>Los parámetros se especifican después de que el nombre de la función, dentro de los
+                    paréntesis.
+                    Puede añadir tantos parámetros como desee, sólo les separan con una coma.</h3>
+                <h3>El siguiente ejemplo tiene una función con un parámetro (variable). Cuando se invoca la
+                    función,
+                    se pasa a lo largo de un nombre de pila, que se utiliza dentro de la función para imprimir
+                    el
+                    nombre completo</h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> def una_funcion(variable):</h6>
+                    <h6>&emsp;print(variable + " función")</h6><br>
+                    <h6>una_funcion("La")</h6>
+                    <h6>una_funcion("Una")</h6>
+                    <h6>una_funcion("Nuestra")</h6>
+                </div>
+                <h3>Se puede enviar cualquier tipo de datos de parámetro a una función (cadena, número, lista,
+                    diccionario, etc.), y será tratado como el mismo tipo de datos dentro de la función, como en
+                    este caso que se pasó un string.</h3><br>
+                <h1>Parámetros por defecto</h1>
+                <h3>Si llamamos a la función sin parámetros, se utiliza el valor por defecto.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> def una_funcion(variable = "Una"):</h6>
+                    <h6>&emsp;print(variable + " función")</h6><br>
+                    <h6>una_funcion("La")</h6>
+                    <h6>una_funcion()</h6>
+                    <h6>una_funcion("Nuestra")</h6>
+                </div>
+                <h3>Como se ve en el ejemplo para hacer un parámetro por defecto se debe asignar un valor a la
+                    variable de la función, que en caso de ser llamada sin parámtro automáticamente tomará ese.
+                </h3>
+                <br>
+                <h1>Valores retornados</h1>
+                <h3>Para permitir que una función devuelve un valor, se utiliza la palabra clave "return"</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> def una_funcion(x):</h6>
+                    <h6>&emsp;return x * 5</h6><br>
+                    <h6>print(una_funcion(1))</h6>
+                    <h6>print(una_funcion(2))</h6>
+                    <h6>print(una_funcion(4))</h6>
+                </div><br>
+                <h1>Asignaciones con palabras clave</h1>
+                <h3>Si hay una función donde se desconoce el orden de sus parámetros se pueden asignar sabiendo
+                    los
+                    nombres de estos.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6> def una_funcion(x,y,z):</h6>
+                    <h6>&emsp;return x * 5 + y * z </h6><br>
+                    <h6>print(una_funcion(z = 1 , y = 2 , x = 4))</h6>
+                </div><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#for">Ciclo for</h1>
+            <div class="collapse" id="for">
+                <h3>Un ciclo for se utiliza para iterar sobre una secuencia (que es ya sea una lista, una tupla, un
+                    diccionario, un conjunto, o una cadena).</h3>
+                <h3>Con el ciclo for podemos ejecutar un conjunto de instrucciones, una vez por cada elemento de una
+                    lista, tupla, set etc.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>fruits = ["apple", "banana", "cherry"]</h6>
+                    <h6>for x in fruits:</h6>
+                    <h6>&emsp;print(x)</h6>
+                </div>
+                <h3>Esto es aplicable a string de forma similar, solo que estará tomando los valores de los carácteres
+                    de izquierda a derecha</h3><br>
+                <h1>Sentencia break</h1>
+                <h3>Con la sentencia break podemos detener el ciclo antes de que haya pasado a través de todos los
+                    elementos</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>fruits = ["apple", "banana", "cherry"]</h6>
+                    <h6>for x in fruits:</h6>
+                    <h6>&emsp;print(x)</h6>
+                    <h6>&emsp;if x == "banana":</h6>
+                    <h6>&emsp;&emsp;break</h6>
+                </div><br>
+                <h1>La función range</h1>
+                <h3>Para que el ciclo pase a través de un conjunto de código de un número especificado de veces, se
+                    puede utilizar la función range().</h3>
+                <h3>La función range() devuelve una secuencia de números, a partir de 0 por defecto, y los incrementos
+                    por 1 (por defecto), y termina en un número especificado (el número dado menos 1).</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>for x in range(6):</h6>
+                    <h6>&emsp;print(x)</h6>
+                </div>
+                <h3>Esto imprimirá desde el 0 hasta el 5</h3><br>
+                <h1>Otras formas de usar range()</h1>
+                <h3>El range de igual forma se le pueden añadir más parámetros numéricos (máximo 3) de esta forma
+                    range(i,j,k) donde "i" es el número inicial, "j" es el sucesor del número límite y "k" es el tipo de
+                    suma que se realiza desde el valor inicial.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>for x in range(1,6,2):</h6>
+                    <h6>&emsp;print(x)</h6>
+                </div>
+                <h3>Lo que imprimirá serán los números 1 ,3 y 5</h3><br>
+                <h1>Ciclos anidados</h1>
+                <h3>Es un ciclo dentro de un ciclo, donde el ciclo interior se realizará la cantidad de veces que
+                    iteraciones tenga el exterior</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>adjetivos = ["alto","pequeño"] </h6>
+                    <h6>personas = ["Alberto es ","Juan es "]</h6>
+                    <h6>for x in adjetivos:</h6>
+                    <h6>&emsp;for y in personas:</h6>
+                    <h6>&emsp;&emsp;print(y+x)
+                </div>
+                <h3>En este caso imprimirá que Alberto es alto y pequeño, y lo mismo con juan.</h3><br>
+                <h1>Sentencia pass</h1>
+                <h3>Como ocurría anteriormente con funciones y condicionales, si un ciclo for no tiene argumento dentro
+                    de este se debe poner pass para así no generar un error</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>for x in range(1,6,2):</h6>
+                    <h6>&emsp;pass</h6>
+                </div><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#str">Strings</h1>
+            <div class="collapse" id="str">
+                <h3>Se define un string por el o los caracteres rodeados por comillas simples o dobles ("" o '') sienfo
+                    "hola" lo mismo que 'hola'.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>print("Hola")</h6>
+                    <h6>print('Hola')</h6>
+                </div>
+                <h3>En ambos casos se imprime lo mismo (Hola).</h3><br>
+                <h1>Operaciones con string</h1>
+                <h3>Los estring se pueden asignar a las variables y operar en ellas, con sumas de strings,
+                    multiplicación de
+                    un string por un número entero. Recordar que nunca se puede sumar un string con un valor numérico a
+                    menos que sea de la forma string + str(valor)</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>palabra = "Hola"</h6>
+                    <h6>otra_palabra = " y adiós"</h6>
+                    <h6>print(palabra + otra_palabra)</h6>
+                    <h6>print(palabra * 2)</h6>
+                </div>
+                <h3>En el caso de la suma lo que resultaría sería print("Hola y adiós") y en la multiplicación
+                    print("HolaHola")</h3><br>
+                <h1>Índices de un string</h1>
+                <h3>Un tring funciona como una matriz, por lo cual tiene índice, siempre partiendo desde el índice 0.
+                </h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>pa = "Hola"</h6>
+                    <h6>print(pa[0,4,2])</h6>
+                </div>
+                <h3>En este caso a la variable pa se le aplican unas llaves de forma [i,j,k], donde "i" será el índice
+                    inicial, "j" el sucesor del límite al que puede llegar y "k" la razón e que se van sumando</h3>
+                <h3>En el ejemplo se toman [0,4,2] lo que equivale a los índices 0 y 2 y la palabra es "H" = 0 ,"o" = 1
+                    ,"l"
+                    = 2 y "a" = 3 por lo que la palabra que resulta será "Hl".</h3><br>
+                <h1>Verificación</h1>
+                <h3>Se puede comprobar si un caracter o una palabra está en otro string utilizando la función in, y en
+                    contraparte a esta se puede usar el not in de modo que si la respuesta fuera true en el caso
+                    anterior en
+                    este sería false.</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>texto = "Hola como estás"</h6>
+                    <h6>p = "como"</h6>
+                    <h6>if p in texto:</h6>
+                    <h6>&emsp;print("Si")</h6>
+                    <h6>if p not in texto:</h6>
+                    <h6>&emsp;print("No")</h6>
+                    <h6>else:</h6>
+                    <h6>&emsp;print("Si")</h6>
+                </div>
+                <h3>Como en ambos casos existe p en texto de igual forma imprimirá Si</h3><br>
+                <h1>Plantillas format</h1>
+                <h3>Existe una función llamada format() que utiliza plantillas construidas por string y se usan de la
+                    siguiente forma</h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>plantilla = "Edad: {} {}"</h6>
+                    <h6>edad = 36</h6>
+                    <h6>años = "años"</h6>
+                    <h6>print(plantilla.format(edad,años))</h6>
+                </div>
+                <h3>En este caso lo que ocurrirá será que donde existan las llaves de la forma {} se remplazarán por el
+                    string dado como parámentro en ese mismo orden resultando de la forma "Edad: 36 años"</h3><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#lis">Listas</h1>
+            <div class="collapse" id="lis">
+                <h3>Es una colección de elementos ordenado que permite ser alterada y que al igual que otros objetos
+                    tiene
+                    propiedades de matriz.</h3>
+                <h3>Las listas pueden contener diferentes elementos como: int,float,string,booleanos,listas,etc.</h3>
+                <br>
+                <h1>Crear una lista</h1>
+                <h3>Para crear o definir una lista hay 2 formas básicas: la primera es usar simplemente las llaves de
+                    "corchetes" [] sobre uno o varios elementos y la segunda es usar la función list() sobre uno varios
+                    elementos</h3>
+                <h2>Ejemplo</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>a = [1,"al",5]</h6>
+                    <h6>b = list(1,"al",5)</h6>
+                </div><br>
+                <h3>Para hacer una copia de una lista existente y que la lista copiada no se altere se hace esto:</h3>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>a = [1,2]</h6>
+                    <h6>b = list(a)</h6>
+                </div>
+                <h3>Ya que de otro modo lo que se genera son "llaves" que llamarán a la misma base de datos, osea que si
+                    se
+                    hace b = a, si se llegase a alterar b, a también cambiaría</h3><br>
+                <h1>Concadenación de listas</h1>
+                <h3>Las listas se pueden "sumar" entre sí al igual que los string</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>a = list(1,2)</h6>
+                    <h6>b = list(3)</h6>
+                    <h6>c = a + b</h6>
+                </div>
+                <h3>Entonces el valor de "c" será [1,2,3], ya que lo que hace la suma es la anexación de elementos
+                    aunque
+                    estos existan en la lista anterior</h3><br>
+                <h1>Índices de una lista</h1>
+                <h3>La lista al tener relación con las matrices lleva consigo índices de la forma: lista[i,j,k] , donde
+                    "i"
+                    será el índice del elemento inicial, "j - 1" el elemento límite al cual llegar y "k" la razón de
+                    adición
+                    constante.</h3>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>lista = [0,1,2,3,4,5,6,7]</h6>
+                    <h6>print(lista[0,7,2])</h6>
+                </div>
+                <h3>En este ejemplo lo que debe imprimir es [0,2,4,6] según lo dicho anteriormente</h3><br>
+                <h1>Reasignación a elementos específicos</h1>
+                <h3>Se pueden alterar elementos específicos de una lista a través de sus índices de la siguiente manera:
+                </h3>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>lista = [0,1,2,3,4,5]</h6>
+                    <h6>lista[5] = 9</h6>
+                    <h6>print(lista)</h6>
+                </div>
+                <h3>Con lo anteriormente dicho se puede llegar a la conclusión de que el único valor que cambió fué el
+                    de
+                    índice 5, quedando [0,1,2,3,4,9]</h3><br>
+                <h1>Verificación</h1>
+                <h3>Al igual que en los string se puede usar la palabra clave "in" para comprobar si un elemento está en
+                    una
+                    lista</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-white text-dark pl-2">
+                    <h6>lista = [0,1,2,3,4,5]</h6>
+                    <h6>if 4 in lista:</h6>
+                    <h6>&emsp;print("Sí está")</h6>
+                </div>
+                <h3>En este caso la condición será verdadera y por esto imprimirá "Sí está"</h3><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#tup">Tuplas</h1>
+            <div class="collapse" id="tup">
+                <h3>Las tuplas son datos que no son modificables y no pueden ser ordenadas. y son escritas con
+                    '()'
+                </h3>
+                <h1>Crear una tupla</h1>
+                <h3>Para crear una tupla nueva se utiliza tuple(), en cambio con valores, se colocan los valores
+                    dentro de ()</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>x = tuple() #esto crea una tupla vacia.</h6>
+                    <h6>y = ('gato','perro','loro')</h6>
+                </div>
+                <h1>Acceder a las tuplas</h1>
+                <h3>Para acceder al valor de una tupla refiriendo el indice con '[]'</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>y = ('francia','españa','china')</h6>
+                    <h6>print(y[1])</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>españa</h6>
+                </div>
+                <h3>Al igual que con los strings estos se pueden tener indices negativos.</h3>
+                <h1>Rango de indices</h1>
+                <h3>Como en los strings o las listas estos tambien se puede obtener un rango de valores</h3>
+                <h2>Ejemplos: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>z = ('manzana','pera','uva','banana','cerezas','kiwi')</h6>
+                    <h6>print(z[1:3])</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>('pera','uva')</h6>
+                </div>
+                <h3>Estos tambien pueden ser negativos.</h3>
+                <h1>Ciclo atraves de la tupla</h1>
+                <h3>Estos pueden ser recorridos por un ciclo for</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>frutas = ('manzana','pera','uva')</h6>
+                    <h6>for i in frutas:</h6>
+                    <h6>&emsp;print(i)</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>manzana</h6>
+                    <h6>pera</h6>
+                    <h6>uva</h6>
+                </div>
+                <h1>Verificar si un elemento existe</h1>
+                <h3>Para determinar si existe un elemento en una tupla se utiliza in</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>frutas = ('manzana','pera','uva')</h6>
+                    <h6>if 'pera' in frutas:</h6>
+                    <h6>&emsp;print('si, pera esta en frutas')</h6>
+                    <h6># en la salida imprime: si, pera esta en frutas</h6>
+                </div>
+                <h1>Crear una tupla con un elemento</h1>
+                <h3>Para crear una tupla con un elemento se debe crear con el elemento seguido de una coma</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>x = ('casa',)</h6><br>
+                    <h6># esto no es una tupla</h6>
+                    <h6>y = ('carro')</h6>
+                </div>
+                <h1>Unir dos tuplas</h1>
+                <h3>Para unir dos tuplas se coloca el operador de adiccion el cual al unir las va añadiendo al
+                    final
+                    de la primera tupla</h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>tuple1 = ("a", "b" , "c")</h6>
+                    <h6>tuple2 = (1, 2, 3)</h6>
+                    <h6>print(tuple1+tuple2)</h6>
+                </div>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>("a","b","c",1,2,3)</h6>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark text-white bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#dic">Diccionarios</h1>
+            <div class="collapse" id="dic">
+                <h3>Los diccionarios son una colección de datos, el cual es sin orden, es mutable e indexiable, se
+                    escriben
+                    con '{}', posee llaves y valores</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>auto = {'marca':'Ford','modelo':'Mustang','año':1946}</h6>
+                </div><br>
+                <h1>Crear un diccionario</h1>
+                <h3>Al crear un diccionario se tiene que tener en cuenta que las llaves tienen que ser datos inmutables
+                    como
+                    strings, tuplas o números, sin embargo los valores que puede contener esta llave puede ser de
+                    cualquier
+                    tipo de dato. Los diccionarios vacios se crean con dict() o colocando {}</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>d = dict() #esto crea un diccionario vacio</h6>
+                    <h6>b = {} #esto tambien</h6>
+                    <h6>c = {['juan','pedro']:'invitados'} #esto arrojara error debido a que las listas son mutables
+                    </h6>
+                </div><br>
+                <h1>Acceder a los valores</h1>
+                <h3>Para acceder a cierto valor tienes que indicarle la llave con los '[]'</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>x = auto['año']</h6>
+                    <h6>print(x)</h6>
+                </div><br>
+                <h2>En la salida: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>1946</h6>
+                </div><br>
+                <h1>Cambiar valores</h1>
+                <h3>Para cambiar valores se debe asignarle al diccionario con la llave indicada el valor a cambiar</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>auto['año'] = 2019</h6>
+                    <h6>print(auto) #retorna el mismo diccionario solo que la llave año su valor es cambiado de 1946 a
+                        2019
+                    </h6>
+                </div><br>
+                <h1>Recorrer un diccionario</h1>
+                <h3>Para recorrer un diccionario se utiliza un ciclo for. Este solo pasa por las llaves del diccionario
+                </h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>for x in auto</h6>
+                    <h6>&emsp;print(x) #imprime todas las llaves</h6>
+                </div><br>
+                <h3>Pero tambien exite un metodo para obtener los valores y es así: </h3>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>for x in auto</h6>
+                    <h6>&emsp;print(auto[x]) #imprime todos los valores</h6>
+                </div><br>
+                <h1>Verificar si un elemento esta en un diccionario</h1>
+                <h3>Para Verificar se utiliza el in</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>if 'modelo' in auto:</h6>
+                    <h6>&emsp;print('si, esta en auto') #en la salida esta 'si, esta en el auto' debido a que se
+                        encuantra
+                        en el diccionario como llave</h6>
+                </div><br>
+                <h1>Añadir items</h1>
+                <h3>Para añadir items al diccionario se le asigna a el diccionario con la llave que quiere agregar su
+                    respectivo valor</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>auto['color'] = rojo</h6>
+                    <h6>print(auto) #imprime el diccionario solo que con un valor extra al final de este</h6>
+                </div><br>
+                <h1>Eliminar items</h1>
+                <h3>Para eliminar items se utiliza la funcion pop()</h3>
+                <h2>Ejemplo: </h2>
+                <div class="border border-secondary bg-light text-dark pl-2">
+                    <h6>auto.pop(la llave que quiere eliminar)</h6>
+                </div><br>
+            </div>
+        </div>
+        <div class="container-fluid bg-light bb">
+            <h1 class="display-3 t" data-toggle="collapse" data-target="#ar">Archivos</h1>
+            <div class="collapse" id="ar">
+                <h3>Los archivos son objetos que se pueden leer,actualizar o eliminar con funciones de python </h3>
+                <h3>Existen 4 métodos para operar archivos: "r" sirve para leer un archivo, "a" sirve para actualizar un
+                    archivo (agregar información), "w" sirve crear un archivo y escribir en el, si ya existe reescribe
+                    sobre
+                    este y por último el "x" que sirve para crear un archivo.</h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = open(nombre_archivo,"r")</h6>
+                    <h6>b = open(nombre_archivo,"a")</h6>
+                    <h6>c = open(nombre_archivo,"w")</h6>
+                    <h6>d = open(nombre_archivo,"x")</h6>
+                    <h6>a.close()</h6>
+                    <h6>b.close()</h6>
+                    <h6>c.close()</h6>
+                    <h6>d.close()</h6>
+                </div>
+                <h3>De esta manera se hace, normalmente se usa para archivos txt y el nombre_archivo por ejemplo debe
+                    ser
+                    así "archivo.txt" para que pueda operarse, y siempre hay querecordar de luego haber leído un archivo
+                    o
+                    terminado de operar el cerrarlo para evitar errores.</h3><br>
+                <h1>Lectura de archivos</h1>
+                <h3>Una forma de leer archivos útil es como en el siguiente ejemplo:</h3>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = open(nombre_archivo,"r")</h6>
+                    <h6>for linea in a:</h6>
+                    <h6>&emsp;lista = linea.trip().split()</h6>
+                    <h6>&emsp;#Esto lo que hace es transformar cala linea en una lista</h6>
+                    <h6>a.close()</h6>
+                </div><br>
+                <h1>Escritura de archivo</h1>-
+                <h3>Para escribir en un archivo se utiliza "w" para un archivo no existente y "a" para añadir
+                    información a
+                    un archivo existente y se hace algo del tipo archivo.write(lo_que_se_quiera_escribir)</h3>
+                <h2>Ejemplo:</h2>
+                <div class="border border-secondary bg-dark text-white pl-2">
+                    <h6>a = open("archivo.txt","w")</h6>
+                    <h6>a.write("Hola archivo")</h6>
+                    <h6>a.close()</h6>
+                </div>
+                <h3>Un dato útil puede ser que en caso de añadir una nueva línea,al final del string debe haber un
+                    string
+                    "/n" o al inicio de este, lo que en el archivo se lee como el caracter especial que produce un salto
+                    de
+                    línea</h3><br>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="display-1 text-center">Métodos</h1>
+        <h1 class="display-3 text-left">Funciones en comun para datos secuenciales</h1>
+        <h5>x es una varaiable, y es otra variable</h5>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x.len()</td>
+                    <td>Retorna el largo de la variable</td>
+                </tr>
+                <tr>
+                    <td>x.index(y)</td>
+                    <td>Retorna el indice del valor encontrado en la variable</td>
+                </tr>
+                <tr>
+                    <td>x.count(y)</td>
+                    <td>Retorna el numero de veces que se repite un valor en la varaiable</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="display-3 text-left">Strings</h1>
+        <h5>x es una varaiable,s es un string *para otros strings se colocara un '</h5>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>str(x)</td>
+                    <td>Retorna un string</td>
+                </tr>
+                <tr>
+                    <td>s.lower()</td>
+                    <td>Retorna el string en minúscula</td>
+                </tr>
+                <tr>
+                    <td>s.upper()</td>
+                    <td>Retorna el string en mayúscula</td>
+                </tr>
+                <tr>
+                    <td>s.capitalize()</td>
+                    <td>Retorna el string en capitalizado</td>
+                </tr>
+                <tr>
+                    <td>s.format(x)</td>
+                    <td>Introduce valores especializados a un string</td>
+                </tr>
+                <tr>
+                    <td>s.replace(s',s'')</td>
+                    <td>Remplaza en el string s' por s''</td>
+                </tr>
+                <tr>
+                    <td>s.split(s')</td>
+                    <td>Separa el string con un string especifico, retornando una lista con ellos *si es espacio
+                        dejar como split()</td>
+                </tr>
+                <tr>
+                    <td>s.strip(s')</td>
+                    <td>Corta y elimina el string especifico al inicio y al final *si son caracteres especiales
+                        o
+                        espacios dejar como strip()</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="display-3 text-left">Listas</h1>
+        <h5>x es un elemento, p es la posicion, l es una lista *para otras listas se colocara un '</h5>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>l.sort()</td>
+                    <td>Ordena la lista</td>
+                </tr>
+                <tr>
+                    <td>l.append(x)</td>
+                    <td>Añade un elemento al final de la lista</td>
+                </tr>
+                <tr>
+                    <td>l.insert(p,x)</td>
+                    <td>Añade un elemento en una posición especifica</td>
+                </tr>
+                <tr>
+                    <td>l.reverse()</td>
+                    <td>Invierte el orden de la lista</td>
+                </tr>
+                <tr>
+                    <td>l.remove(x)</td>
+                    <td>Remueve la primera coincidencia de la variable en la lista</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 class="display-3 text-left">Archivos</h1>
+        <h5>a es un archivo, x es un string</h5>
+        <table class="table table-hover text-left">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>a = open('nombre_del_archivo',m)</td>
+                    <td>Para abrir un archivo, con m que es el modo puede ser 'r' (modo lectura),'w' (modo escribir del
+                        inicio),'a' (modo escribir agregando)</td>
+                </tr>
+                <tr>
+                    <td>a.close()</td>
+                    <td>Para cerrar un archivo</td>
+                </tr>
+                <tr>
+                    <td>a.write(x)</td>
+                    <td>Para escribir en un archivo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <br>
+    <div class="container-fluid bg-dark p-2">
+        <button class="btn btn-outline-light" onclick="window.history.back()" id="btn-v">Volver a la pagina anterior</button>
+    </div>
+{% endblock content %}

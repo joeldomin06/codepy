@@ -1,0 +1,9 @@
+{% extends extend %}
+{% load static %}
+{% load  template_extras %}
+{% block boton %}
+<a href="{% url 'respuesta' leng=leng tip=tip nombre=nombre porc=porc %}" style="display: none" id="btnr"></a>
+{% endblock boton %}
+{% block javascript %}
+<script src="{% static 'js/load.js' %}"></script>
+{% endblock javascript %}

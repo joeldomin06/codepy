@@ -1,0 +1,113 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/quiz_condicionales.css' %}">
+    <script src="{% static 'js/quiz.js' %}"></script>
+{% endblock extrahead%}
+{% block content %}
+{% if lista_clases %}
+    <div class="container" id="b" style="display: none">
+{% else %} 
+    <div class="container" id="b">
+{% endif %}
+        <div class="text-center">
+            <h1 id="pre">Quiz de if y else de python</h1>
+            <h6>consta de 5 preguntas de if y else, intenta realizar tu mejor tiempo.</h6>
+            <button class="btn btn-dark" onclick="iniciar()">iniciar</button>
+            <hr>
+        </div>
+    </div>
+    <div class="container-fluid sticky text-center bg-dark">
+        <h1 class="display-1" id="cron">0m 0s</h1>
+    </div>
+{% if lista_clases %}
+    <div class="container" id="s">
+{% else %}
+    <div class="container" id="s" style="display: none;">
+{% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <div id="p0" class="{{lista_clases.0}}">
+                <hr>
+                <h2>1) Elija la opcion que no daría error con if:</h2>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p0" value="a">
+                    <h6>if variable > 100</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p0" value="b">
+                    <h6>if variable == 0:</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p0" value="c">
+                    <h6>​variable > 5 if:</h6>
+                </div>
+            </div>
+            <div id="p1" class="{{lista_clases.1}}">
+                <hr>
+                <h2>2) Si el valor de la variable x es 5,¿ a cuál de los siguientes condicionales lograria entrar ?:</h2>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p1" value="a">
+                    <h6>if x > 5:</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p1" value="b">
+                    <h6>else:</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p1" value="c">
+                    <h6>​if x > 2</h6>
+                </div>
+            </div>
+            <div id="p2" class="{{lista_clases.2}}">
+                <hr>
+                <h2>3) Respecto a los condicionales if, elif y else, elija cual de estos no lleva condición para cumlir cierta
+                    acción</h2>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p2" value="a">
+                    <h6>if</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p2" value="b">
+                    <h6>elif</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p2" value="c">
+                    <h6>​else</h6>
+                </div>
+            </div>
+            <div id="p3" class="{{lista_clases.3}}">
+                <hr>
+                <h2>4) Respecto al siguiente programa,¿ cuál es el ultimo valor de x ?</h2>
+                <h2>
+                    x = 7
+                    <br>if x < 7: <br>&emsp;x = 6
+                        <br>elif x > 7:
+                        <br>&emsp;x = 5
+                        <br>else:
+                        <br>&emsp;x = 1
+                        <br>x += 3
+                </h2>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p3" value="a">
+                    <h6>4</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p3" value="b">
+                    <h6>10</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p3" value="c">
+                    <h6>​9</h6>
+                </div>
+            </div>
+            <div id="p4" class="{{lista_clases.4}}">
+                <hr>
+                <h2>5) Si para que en el programa se entre en un condicional if se necesita que esa condición sea True, que es
+                    lo
+                    que ocurre cuando es: "if not condición:"</h2>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p4" value="a">
+                    <h6>Para entrar al condicional la condición debe ser True</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p4" value="b">
+                    <h6>No ocurre nada porque está mal definida</h6>
+                </div>
+                <div class="container-fluid ml-3 p-2 d-flex"><input type="radio" class="rad" name="p4" value="c">
+                    <h6>​Para entrar al condicional la condición debe ser false</h6>
+                </div>
+            </div>
+            <hr>
+            {% block boton %}  
+            <input type="submit" value="Enviar" class="btn btn-dark">
+            {% endblock boton %}
+        </form>
+    </div>
+{% endblock content %}

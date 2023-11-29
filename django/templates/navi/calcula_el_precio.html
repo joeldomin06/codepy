@@ -1,0 +1,64 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/ordenar.css' %}">
+{% endblock extrahead %}
+{% block content %}
+    <div class="container">
+        <hr>
+        <h1 style="text-align: center;">Calcula el Precio</h1>
+        <hr>
+        <p>
+            Una tienda de queso necesitan tu ayuda, a diario suelen llegar muchos clientes y los empleados se demoran en
+            calcular los precios de los queso. Se te solicita crear un programa que pida el peso del queso a vender en
+            Kg(entero) y el valor de ese tipo de queso también en kg(entero) de este en ese mismo orden, y que muestre
+            el precio
+            a vender del queso en entero.
+        </p>
+        <h3>Ordenamineto de codigo</h3>
+        <br>
+        <div class="row">
+                <div class="col">
+                    <div class="row"><div class="col drop" name="r1"><p class="code {{ lista_clases.0 }}" id="drag1">peso_queso = int(input())</p></div></div>
+                    <div class="row"><div class="col drop" name="r2"><p class="code {{ lista_clases.1 }}" id="drag2">precio_por_kg = int(input())</p></div></div>
+                    <div class="row"><div class="col drop" name="r3"><p class="code {{ lista_clases.2 }}" id="drag3">precio_final = peso_queso*precio_por_kg</p></div></div>
+                    <div class="row"><div class="col drop" name="r4"><p class="code {{lista_clases.3 }}" id="drag4">print(precio_final)</p></div></div>
+                </div>
+                <div class="col">
+                    <div class="row"><div class="col"><div id="div1" class="drop dv"></div></div></div>
+                    <div class="row"><div class="col"><div id="div2" class="drop dv"></div></div></div>
+                    <div class="row"><div class="col"><div id="div3" class="drop dv"></div></div></div>
+                    <div class="row"><div class="col"><div id="div4" class="drop dv"></div></div></div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <form method="POST" id="myform">
+            {% csrf_token %}
+            <input type="hidden" name="drag1" value="">
+            <input type="hidden" name="drag2" value="">
+            <input type="hidden" name="drag3" value="">
+            <input type="hidden" name="drag4" value="">
+            {% block boton %}
+            <input type="submit" class="btn btn-dark" value="enviar" id="btn">
+            {% endblock boton %}
+        </form>
+        <div class="row">
+            <div class="col"><button class="btn btn-dark" id="enviado"
+                    onclick="document.getElementById('ayuda_1').innerHTML= consejos(0,3)">Botón para consejos</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4 id="ayuda_1" class="text-danger"></h4>
+                <h1 id="cron"></h1>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block javascript %}
+    <script src="{% static 'js/ordenar.js' %}"></script>
+{% endblock javascript %}

@@ -1,0 +1,91 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/codepymaker.css' %}">
+{% endblock extrahead %}
+{% block navbar %}
+    <div class="container-fluid bg-secondary text-center">
+        <img src="{% static 'css/imagenes/titulo.png' %}" alt="tit" height="75" width="150">
+    </div>
+    <div class="bg-dark"><button class="btn btn-dark text-dark" disabled>hello</button></div>
+{% endblock navbar %}
+{% block content %}
+    <div class="container">
+        <h1 class="display-1 text-center">¿Que es CodepyMaker?</h1>
+        <h3 class="text-center">pagina web que se enfoca en la programacion, esta es planteada en problematicas con
+            diferentes formas de resolución el cual acompañando con ayudas y referencias, mejora y facilita el
+            aprendizaje
+            del lenguaje. Pagina con proyeccion a diferentes lenguajes, principalmente python.</h3>
+        <br>
+        <div class="d-flex justify-content-center">
+            <span class="rounded-circle p-5 m-4" id="d1" data-toggle="collapse" data-target="#completar"><img
+                    src="{% static 'css/imagenes/completar-icon.png' %}" alt=""></span>
+            <span class="rounded-circle p-5 m-4" id="d2" data-toggle="collapse" data-target="#ordenar"><img
+                    src="{% static 'css/imagenes/drop-icon.png' %}" alt=""></span>
+            <span class="rounded-circle p-5 m-4" id="d3" data-toggle="collapse" data-target="#ruteo"><img
+                    src="{% static 'css/imagenes/table.png' %}" alt=""></span>
+            <span class="rounded-circle p-5 m-4 text-white" id="d4" data-toggle="collapse" data-target="#quizes"><i class="fa fa-question-circle"
+                    style="font-size: 100px"></i></span>
+            <span class="rounded-circle p-5 m-4 text-white" id="d5" data-toggle="collapse" data-target="#referencia"><i
+                    class="fa fa-book" style="font-size: 100px"></i></span>
+        </div>
+        <br>
+    </div>
+    <div class="collapse" id="completar">
+        <h1 class="display-1 m-2">Completar el codigo</h1>
+        <div class="d-flex justify-content-center m-2">
+            <h3>Los ejercicios de completar codigo son esenciales para fomentar el aprendizaje debido a que sirve como
+                primeros pasos para comenzar a escribir codigo libremente. Dando ya una idea de base para resolver un
+                problema.
+            </h3>
+            <img src="{% static 'css/imagenes/gif/completar.gif' %}" class="img-c" alt="">
+        </div>
+        <br>
+    </div>
+    <div class="collapse" id="ordenar">
+        <h1 class="display-1 mx-2">Ordenar el codigo</h1>
+        <div class="d-flex justify-content-center m-2">
+            <h3>los ejercicios de ordenar el codigo fomentan el pensamiento logico y mejora la capacidad de secuenciar,
+                el cual es importante para el aprendizaje del lenguaje.</h3>
+            <img src="{% static 'css/imagenes/gif/ord2.gif' %}" class="img-c" alt="">
+        </div>
+        <br>
+    </div>
+    <div class="collapse" id="ruteo">
+        <h1 class="display-1 mx-2">Ruteo</h1>
+        <div class="d-flex justify-content-center m-2">
+            <h3>los ejercicios de ruteo son los mas importantes para entrenar la capacidad secuencial, ya que se tiene
+                que seguir el codigo como lo haria el computador el cual te dara una idea de lo que pasara con el
+                programa
+            </h3>
+            <img src="{% static 'css/imagenes/gif/ruteo.gif' %}" class="img-c" alt="">
+        </div>
+        <br>
+    </div>
+    <div class="collapse" id="quizes">
+        <h1 class="display-1 mx-2">Quizes</h1>
+        <div class="d-flex justify-content-center m-2">
+            <h3>Los Quizes tienen un rol fundamental en el aprendizaje, ya que se puede demostrar los conocimientos con
+                test
+                especializados en una parte del lenguaje de programación como los for o los condicionales en python</h3>
+            <img src="{% static 'css/imagenes/gif/Quiz.gif' %}" class="img-c" alt="">
+        </div>
+        <br>
+    </div>
+    <div class="collapse" id="referencia">
+        <h1 class="display-1 mx-2">Referencias y ayudas</h1>
+        <div class="d-flex justify-content-center m-2">
+            <h3>Con el fin de facilitar el aprendizaje del lenguaje, se colocaron botones de consejos, los cuales te
+                daran tips
+                para poder resolver el ejercicio. La pagina de referencias sirve para señalar las funciones importantes
+                y como
+                funcionan, aparte de que indica recomendaciones de editores de codigo para que sea mas facil la tarea de
+                escritura.</h3>
+            <img src="{% static 'css/imagenes/gif/consejos.gif' %}" class="img-c" alt="">
+        </div>
+        <br>
+    </div>
+    <div class="container-fluid bg-dark p-2">
+        <button class="btn btn-outline-light" onclick="window.history.back()" id="btn-v">Volver a la pagina anterior</button>
+    </div>
+{% endblock content %}

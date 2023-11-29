@@ -1,0 +1,63 @@
+{% extends 'base/temp.html' %}
+{% load  static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+{% endblock %}
+{% block navbar %}
+    {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger sticky-top" role="alert" style="margin: 0;">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>({{field.label}}):{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for eror in field.non_field_error %}
+            <div class="alert alert-danger sticky-top" role="alert" style="margin: 0;">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>({{field.label}}):{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top" id="bar">
+        <div class="navbar-nav ml-2 mr-auto"><img src="{% static 'css/imagenes/titulo.png' %}" alt="" id="img"></div>
+        <a href="{% url 'log' %}" class="btn btn-outline-light text-white">Iniciar sesión</a>
+    </nav>
+{% endblock %}
+{% block content%}
+    <div class="container-fluid" id="divo">
+        <div class="row">
+            <div class="col-md-4 col-lg-4 text-white text-center" id="cont">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h1 id="ti">Registrarse</h1>
+                    <div class="d-flex">
+                        <input type="text" placeholder="usuario" class="form-control mr-2" name="username" required>
+                        <input type="text" placeholder="rol" class="form-control" name="id_rol">
+                    </div>
+                    <input type="email" placeholder="correo" class="form-control mt-2" name="email" required>
+                    {{extendform.carrera}}
+                    <input type="password" placeholder="contraseña" class="form-control mt-2" name="password1" required>
+                    <input type="password" placeholder="confirmar contraseña" class="form-control mt-2" name="password2" required>
+                    <input type="submit" value="Registrarse" class="btn btn-outline-light btn-lg text-white my-2">
+                </form>
+            </div>
+            <div class="col-md-4 col-sm text-white pt-5" id="info">
+                <h1>Contraseñas</h1>
+                <ul>
+                    <li>Tu contraseña no puede ser muy similar otro parametro en tu informacion personal</li>
+                    <li>Tu contraseña debe tener al menos 8 caracteres</li>
+                    <li>Tu contraseña no puede ser muy común</li>
+                    <li>Tu contraseña no puede estar compuesta de solo números</li>
+                </ul>
+                <h1>Rol</h1>
+                <h6>Debes escribirlo con guión ej: 201973423-8</h6>
+            </div>
+            <div class="col-md-4" id="fondo"></div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-right py-2 text-white" id="cod">
+        <a href="{% url 'codepy' %}" class="btn btn-outline-light text-white">¿ Qué es CodepyMaker ?</a>
+    </div>
+{% endblock %}

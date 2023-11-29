@@ -1,0 +1,12 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% load template_extras %}
+{% block content %}
+    <div class="container-fluid text-center" id="cont">
+        <!--Aqui van las paginas que redireccionan-->
+        {% for nomb in lista %}
+        <br>
+            <a class="btn {% cycle 'btn-dark' 'btn-light' %} btn-block border border-secondary" href="{% url 'cargar' leng=lenguaje tip=tipo nombre=nomb %}">{{nomb|to_space}}</a>
+        {% endfor %}
+    </div>
+{% endblock content %}

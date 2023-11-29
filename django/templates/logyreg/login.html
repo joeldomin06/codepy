@@ -1,0 +1,47 @@
+{% extends 'base/temp.html' %}
+{% load  static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock extrahead %}
+{% block navbar %}
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <div class="navbar-nav ml-2 mr-auto"><img src="{% static 'css/imagenes/titulo.png' %}" alt="" width="175px" height="75px"></div>
+        <a href="{% url 'reg' %}" class="btn btn-outline-light texr-white">Registrarse</a>
+    </nav>
+{% endblock navbar %}
+{% block content %}
+    <div class="container-fluid h-100" id="fondo">
+        <div class="row justify-content-center h-100">
+            <div class="col col-sm col-md-auto"></div>
+            <div class="col-auto col-sm-auto col-md-auto px-5" id="form">
+                <form method="POST">
+                    {% csrf_token %}
+                    <h1 class="text-center text-white my-4">Iniciar Sesión</h1>
+                    <div id="f">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark"><i class="fa fa-user" style="color: white"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="usuario" name="username">
+                        </div>
+                        <div class="input-group mt-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark"><i class="fa fa-lock" style="color: white"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="contraseña" name="password">
+                        </div>
+                        <div class="mt-2">
+                            <a href="#" class="link-feedback">Olvide mi contraseña</a>
+                            <br>
+                            <input type="submit" class="btn btn-outline-light btn-lg text-white mt-2" value="Iniciar Sesión">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-auto col-sm col-md-auto"></div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-right py-3">
+        <a href="{% url 'codepy' %}" class="btn btn-lg btn-outline-light text-white">¿ Qué es CodepyMaker ?</a>
+    </div>
+{% endblock content %}

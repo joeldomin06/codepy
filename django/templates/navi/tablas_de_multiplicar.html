@@ -1,0 +1,102 @@
+{% extends 'base/temp.html' %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/ruteo.css' %}">
+{% endblock extrahead %}
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Ruteo 1</h1>
+        <hr>
+        <p class="text-justify" id="enunciado">
+            Realice el siguiente ruteo del siguiente programa e indique en el recuadro de la derecha lo que
+            imprime la salida. Cada vez que el valor cambie, escribalo en una nueva fila de la tabla. Si una
+            variable es tipo string, su valor debe ir entre comillas simples <i>' '</i> o dobles <i>" "</i>.
+        </p>
+        <hr>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <h3>
+                    <b>def</b> Op(a,b,c):
+                    <br>&emsp;<b>if</b> c == a*b:
+                    <br>&emsp;&emsp;x = "Correcto"
+                    <br>&emsp;<b>else</b>:
+                    <br>&emsp;&emsp;x = "Incorrecto"
+                    <br>&emsp;return x
+                </h3>
+            </div>
+            <div class="col"></div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-6">
+                <h3>
+                    <br>r = 2
+                    <br><b>while</b> r > 0:
+                    <br>&emsp;r = r - 1
+                    <br>&emsp;v1 = [1,3]
+                    <br>&emsp;v2 = [2,5]
+                    <br>&emsp;res = [3,15]
+                    <br>&emsp;mul = Op(v1[r],v2[r],res[r])
+                    <br>&emsp;print(mul)
+                </h3>
+            </div>
+            <form method="POST" autocomplete="off">
+            <div class="col">
+                <h2>Salida :</h2>
+                <textarea name="txt" id="sal" cols="70" rows="8" value="" style="color: black" class="{{ clase_txt }}"></textarea>
+            </div>
+        </div>
+        <br>
+        <!--Tabla-->
+            {% csrf_token %}
+            <div class="container-fluid mx-2" id="tabla">
+                <div class="row" id="cont">
+                    <div class="col-7" id="tit">Programa</div>
+                    <div class="col-5" id="tit">Op</div>
+                </div>
+                <div class="row" id="cont">
+                    <div class="col-1" id="cont"> r </div>
+                    <div class="col-1" id="cont"> v1 </div>
+                    <div class="col-1" id="cont"> v2 </div>
+                    <div class="col-1" id="cont"> res </div>
+                    <div class="col-3" id="cont"> multi </div>
+                    <div class="col-1" id="cont"> a </div>
+                    <div class="col-1" id="cont"> b </div>
+                    <div class="col-1" id="cont"> c </div>
+                    <div class="col-2" id="cont"> x </div>
+                </div>
+                {% if lista_clases %}
+                    {% for i in lista_clases %}
+                    <div class="row {{ i }}" id="cont">
+                        {% for j in rango_col %}
+                        <div class="{% cycle 'col-1' 'col-1' 'col-1' 'col-1' 'col-3' 'col-1' 'col-1' 'col-1' 'col-2' %}" id="cont">
+                            <input type="text" class="form-control-plaintext" name="r{{ forloop.parentloop.counter0 }}-c{{ j }}" value=""></div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    {% for i in rango_row %}
+                    <div class="row {{ lista_clases.i }}" id="cont">
+                        {% for j in rango_col %}
+                        <div class="{% cycle 'col-1' 'col-1' 'col-1' 'col-1' 'col-3' 'col-1' 'col-1' 'col-1' 'col-2' %}" id="cont">
+                            <input type="text" class="form-control-plaintext" name="r{{ i }}-c{{ j }}" value=""></div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <br>
+            {% block boton %}
+            <input type="submit" value="Enviar" class="btn btn-dark">
+            {% endblock boton %}
+        </form>
+        <button class="btn btn-dark" onclick="document.getElementById('ayuda_1').innerHTML= consejos(0,7)">botón de consejos</button>
+        <br>
+        <p id="ayuda_1"></p>
+        <h1 id="cron"></h1>
+    </div>
+{% endblock content %}
+{% block javascript %}
+    <script src="{% static 'js/ruteo.js' %}"></script>
+{% endblock javascript %}

@@ -1,0 +1,13 @@
+.bb{
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px black;
+    margin: 5px;
+}
+td{
+    font-weight: bold;
+}
+.t:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+}

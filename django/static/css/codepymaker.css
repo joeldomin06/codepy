@@ -1,0 +1,31 @@
+.disabled-select{
+    user-select: none;
+    -moz-user-select: none;
+}
+#d1,#d2,#d3,#d4,#d5{
+    border: 3px solid black;
+    background-color: #343a40;
+    box-shadow: 0 10px 5px grey;
+}
+#d1:hover,#completar{
+    background-color: deepskyblue;
+}
+#d2:hover,#ordenar{
+    background-color: darkorange;
+}
+#d3:hover,#ruteo{
+    background-color: lawngreen;
+}
+#d4:hover,#quizes{
+    background-color: lightcoral;
+}
+#d5:hover,#referencia{
+    background-color: mediumpurple;
+}
+#btn-v:hover{
+    color: #343a40;
+}
+.img-c{
+    border: 3px solid black;
+    border-radius: 10px;
+}

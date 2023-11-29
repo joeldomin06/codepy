@@ -1,0 +1,56 @@
+#fondo{
+    background-color: rgba(0, 0, 0, 0.411);
+}
+#info{
+    background-color: rgb(46, 0, 153);
+    border-left: 10px solid rgba(23, 0, 77, 0.582)
+}
+​html, body {
+    height: 100%;
+    margin: 0;
+}
+#divo{
+    background-image: url(imagenes/usm.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#cont,#fondo{
+    height: 75vh;
+    padding-top: 5vh
+}
+#cod{ 
+    bottom: 0;
+    position: relative;
+}
+#ti{
+    padding-bottom: 10px
+}
+#img{
+    height: 100px;
+    width: 200px;
+}
+#cont{background-color: rgb(31, 31, 31)}
+@media only screen and (max-width: 992px){
+    #fondo{
+        display: none;
+    }
+}
+@media only screen and (max-height:500px){
+    #cod{
+        position: sticky;
+    }
+    #img{
+        height: 50px;
+        width: 100px;
+    }
+    #ti{
+        padding-bottom: 5vh;
+        font-size: 5vh
+    }
+    #cont{
+        height: 100vh;
+    }
+    #info{
+        display: none;
+    }
+}

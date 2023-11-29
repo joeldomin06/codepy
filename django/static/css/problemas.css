@@ -1,0 +1,58 @@
+.imagen{
+    width: 400px;
+    height: 224px;
+    margin-right: auto;
+    margin-right: auto;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+#imagen1{
+    background-image: url('imagenes/screenshot1.png');
+}
+#imagen1:hover{
+    background-image: url('imagenes/gif/ord2.gif');
+}
+#imagen2{
+    background-image: url('imagenes/screenshot2.png');
+}
+#imagen2:hover{
+    background-image: url('imagenes/gif/ruteo.gif');
+}
+#imagen3{
+    background-image: url('imagenes/screenshot3.png');
+}
+#imagen3:hover{
+    background-image: url('imagenes/gif/completar.gif');
+}
+#imagen4{
+    background-image: url('imagenes/screenshot4.png');
+}
+#imagen4:hover{
+    background-image: url('imagenes/gif/Quiz.gif');
+}
+.fac{
+    background-color: rgb(255, 217, 0);
+    border: 2px solid black;
+    font-size: 20px;
+}
+.med{
+    background-color: rgb(255, 94, 0);
+    border: 2px solid black;
+    font-size: 20px;
+}
+.dif{
+    background-color: rgb(255, 0, 0);
+    border: 2px solid black;
+    font-size: 20px;
+    color: white;
+}
+#btn-ord,#btn-rut,#btn-com,#btn-pro{
+    border: 3px solid black;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+#btn-pro{
+    text-decoration-line: none;
+}
